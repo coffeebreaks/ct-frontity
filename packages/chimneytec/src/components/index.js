@@ -4,7 +4,7 @@ import {styled} from "frontity"
 import {useState} from "react"
 import Switch from "@frontity/components/switch";
 // import Link from "@frontity/html2react/processors/link";
-// import Post from "./post";
+import Post from "./posts.js";
 // import "./style.css";
 // import List from "./list";
 import GlobalCss from "./global/globalCss";
@@ -12,8 +12,6 @@ import GlobalCss from "./global/globalCss";
 // import styled, { css } from "styled-components";
 import TopNav from "./global/topNav/topNav";
 import TopNavResp from "./global/topNavResp/topNavResp";
-
-
 
 const Root = ({ state }) => {
 
@@ -63,12 +61,12 @@ const [myState, setMyState] = useState("init")
       <main>
     
         <div>
-            <Text myprop={setMyState}>   {myState}</Text>
+        
           <Switch>
-            {/* <List when={data.isArchive}>This is a list</List>
+            {/* <List when={data.isArchive}>This is a list</List> */}
             <Post when={data.isPost} />
             <Post when={data.isPage} />
-            <div when={data.isError}>404 not found</div> */}
+            <div when={data.isError}>404 not found</div>
           </Switch>
         </div>
       </main>

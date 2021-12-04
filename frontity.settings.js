@@ -45,7 +45,8 @@ const settings = {
       "name": "@frontity/wp-source",
       "state": {
         "source": {
-          "url": "https://vlogtog.webbdesign.org"
+          "url": "https://vlogtog.webbdesign.org",
+          "homepage" : "https://vlogtog.webbdesign.org/"
         }
       }
     },
