@@ -46,7 +46,7 @@ const settings = {
       "state": {
         "source": {
           "url": "https://vlogtog.webbdesign.org",
-          "homepage" : "https://vlogtog.webbdesign.org/"
+          "homepage" : "/skorstensrenovering"
         }
       }
     },
