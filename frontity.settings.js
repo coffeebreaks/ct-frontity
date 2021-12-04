@@ -46,7 +46,7 @@ const settings = {
       "state": {
         "source": {
           "url": "https://vlogtog.webbdesign.org",
-          "homepage": "/start"
+          "homepage": "https://vlogtog.webbdesign.org/chimneytec"
         }
       }
     },

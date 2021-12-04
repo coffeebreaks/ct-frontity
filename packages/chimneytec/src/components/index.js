@@ -46,6 +46,15 @@ const [myState, setMyState] = useState("init")
           display: none;
       }
     `
+
+const Home = () => {
+  return (
+    <>
+test
+    </>
+  )
+}
+
   return (
     <div>
 
@@ -62,6 +71,7 @@ const [myState, setMyState] = useState("init")
         <div>
           <Switch>
             {/* <List when={data.isArchive}>This is a list</List> */}
+           
             <Post when={data.isPost} />
             <Post when={data.isPage} />
             <div when={data.isError}>404 not found</div>
