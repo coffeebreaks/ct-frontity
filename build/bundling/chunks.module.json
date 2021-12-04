@@ -1,0 +1,107 @@
+{
+  "errors": [],
+  "warnings": [],
+  "hash": "9ada2b80e7017f4611eb",
+  "publicPath": "/static/",
+  "outputPath": "C:\\webb\\ct-frontity\\build\\static",
+  "assetsByChunkName": {
+    "ct-frontity": [
+      "ct-frontity.module.js",
+      "ct-frontity.4609c18f8e215e61d11c.hot-update.js"
+    ]
+  },
+  "assets": [
+    {
+      "name": "4609c18f8e215e61d11c.hot-update.json",
+      "size": 53,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {
+        "hotModuleReplacement": true,
+        "immutable": true
+      },
+      "emitted": false
+    },
+    {
+      "name": "ct-frontity.4609c18f8e215e61d11c.hot-update.js",
+      "size": 6032,
+      "chunks": [
+        "ct-frontity"
+      ],
+      "chunkNames": [
+        "ct-frontity"
+      ],
+      "info": {
+        "hotModuleReplacement": true,
+        "immutable": true
+      },
+      "emitted": false
+    },
+    {
+      "name": "ct-frontity.module.js",
+      "size": 6681884,
+      "chunks": [
+        "ct-frontity"
+      ],
+      "chunkNames": [
+        "ct-frontity"
+      ],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "fonts/Roboto-Bold.ttf",
+      "size": 167336,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {
+        "sourceFilename": "packages/chimneytec/src/components/global/fonts/Roboto-Bold.ttf"
+      },
+      "emitted": true
+    },
+    {
+      "name": "fonts/Roboto-Light.ttf",
+      "size": 167000,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {
+        "sourceFilename": "packages/chimneytec/src/components/global/fonts/Roboto-Light.ttf"
+      },
+      "emitted": true
+    },
+    {
+      "name": "fonts/Roboto-Medium.ttf",
+      "size": 168644,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {
+        "sourceFilename": "packages/chimneytec/src/components/global/fonts/Roboto-Medium.ttf"
+      },
+      "emitted": true
+    }
+  ],
+  "filteredAssets": 0,
+  "namedChunkGroups": {
+    "ct-frontity": {
+      "chunks": [
+        "ct-frontity"
+      ],
+      "assets": [
+        "ct-frontity.module.js",
+        "ct-frontity.4609c18f8e215e61d11c.hot-update.js"
+      ],
+      "children": {},
+      "childAssets": {}
+    }
+  },
+  "generator": "loadable-components",
+  "chunks": [
+    {
+      "id": "ct-frontity",
+      "files": [
+        "ct-frontity.module.js",
+        "ct-frontity.4609c18f8e215e61d11c.hot-update.js"
+      ]
+    }
+  ]
+}
