@@ -48,7 +48,6 @@ const [myState, setMyState] = useState("init")
     `
   return (
     <div>
-        
 
        <GlobalCss /> 
        <DesktopMenu> 
@@ -61,7 +60,6 @@ const [myState, setMyState] = useState("init")
       <main>
     
         <div>
-        
           <Switch>
             {/* <List when={data.isArchive}>This is a list</List> */}
             <Post when={data.isPost} />
