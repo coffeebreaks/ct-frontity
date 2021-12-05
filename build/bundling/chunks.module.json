@@ -1,18 +1,18 @@
 {
   "errors": [],
   "warnings": [],
-  "hash": "9ada2b80e7017f4611eb",
+  "hash": "2a783ac80c8b4814b828",
   "publicPath": "/static/",
   "outputPath": "C:\\webb\\ct-frontity\\build\\static",
   "assetsByChunkName": {
     "ct-frontity": [
       "ct-frontity.module.js",
-      "ct-frontity.4609c18f8e215e61d11c.hot-update.js"
+      "ct-frontity.9c25e146049dd569e80c.hot-update.js"
     ]
   },
   "assets": [
     {
-      "name": "4609c18f8e215e61d11c.hot-update.json",
+      "name": "9c25e146049dd569e80c.hot-update.json",
       "size": 53,
       "chunks": [],
       "chunkNames": [],
@@ -23,8 +23,8 @@
       "emitted": false
     },
     {
-      "name": "ct-frontity.4609c18f8e215e61d11c.hot-update.js",
-      "size": 6032,
+      "name": "ct-frontity.9c25e146049dd569e80c.hot-update.js",
+      "size": 29570,
       "chunks": [
         "ct-frontity"
       ],
@@ -39,7 +39,7 @@
     },
     {
       "name": "ct-frontity.module.js",
-      "size": 6681884,
+      "size": 6959300,
       "chunks": [
         "ct-frontity"
       ],
@@ -55,9 +55,9 @@
       "chunks": [],
       "chunkNames": [],
       "info": {
-        "sourceFilename": "packages/chimneytec/src/components/global/fonts/Roboto-Bold.ttf"
+        "sourceFilename": "packages/chimneytec/src/components/fonts/Roboto-Bold.ttf"
       },
-      "emitted": true
+      "emitted": false
     },
     {
       "name": "fonts/Roboto-Light.ttf",
@@ -65,9 +65,9 @@
       "chunks": [],
       "chunkNames": [],
       "info": {
-        "sourceFilename": "packages/chimneytec/src/components/global/fonts/Roboto-Light.ttf"
+        "sourceFilename": "packages/chimneytec/src/components/fonts/Roboto-Light.ttf"
       },
-      "emitted": true
+      "emitted": false
     },
     {
       "name": "fonts/Roboto-Medium.ttf",
@@ -75,9 +75,59 @@
       "chunks": [],
       "chunkNames": [],
       "info": {
-        "sourceFilename": "packages/chimneytec/src/components/global/fonts/Roboto-Medium.ttf"
+        "sourceFilename": "packages/chimneytec/src/components/fonts/Roboto-Medium.ttf"
       },
-      "emitted": true
+      "emitted": false
+    },
+    {
+      "name": "images/close.png",
+      "size": 13130,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {
+        "sourceFilename": "packages/chimneytec/src/components/Navigation/topNavMin/close.png"
+      },
+      "emitted": false
+    },
+    {
+      "name": "images/email.png",
+      "size": 12556,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {
+        "sourceFilename": "packages/chimneytec/src/components/Navigation/topNavMin/email.png"
+      },
+      "emitted": false
+    },
+    {
+      "name": "images/logo.png",
+      "size": 15255,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {
+        "sourceFilename": "packages/chimneytec/src/components/Navigation/topNavMin/logo.png"
+      },
+      "emitted": false
+    },
+    {
+      "name": "images/map.png",
+      "size": 21475,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {
+        "sourceFilename": "packages/chimneytec/src/components/Navigation/topNavMin/map.png"
+      },
+      "emitted": false
+    },
+    {
+      "name": "images/phone.png",
+      "size": 5894,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {
+        "sourceFilename": "packages/chimneytec/src/components/Navigation/topNavMin/phone.png"
+      },
+      "emitted": false
     }
   ],
   "filteredAssets": 0,
@@ -88,7 +138,7 @@
       ],
       "assets": [
         "ct-frontity.module.js",
-        "ct-frontity.4609c18f8e215e61d11c.hot-update.js"
+        "ct-frontity.9c25e146049dd569e80c.hot-update.js"
       ],
       "children": {},
       "childAssets": {}
@@ -100,7 +150,7 @@
       "id": "ct-frontity",
       "files": [
         "ct-frontity.module.js",
-        "ct-frontity.4609c18f8e215e61d11c.hot-update.js"
+        "ct-frontity.9c25e146049dd569e80c.hot-update.js"
       ]
     }
   ]
