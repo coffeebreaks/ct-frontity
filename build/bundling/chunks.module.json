@@ -1,18 +1,18 @@
 {
   "errors": [],
   "warnings": [],
-  "hash": "2a783ac80c8b4814b828",
+  "hash": "bc5dfededb2fa230ae3f",
   "publicPath": "/static/",
   "outputPath": "C:\\webb\\ct-frontity\\build\\static",
   "assetsByChunkName": {
     "ct-frontity": [
       "ct-frontity.module.js",
-      "ct-frontity.9c25e146049dd569e80c.hot-update.js"
+      "ct-frontity.93daa65214ab8caee75f.hot-update.js"
     ]
   },
   "assets": [
     {
-      "name": "9c25e146049dd569e80c.hot-update.json",
+      "name": "93daa65214ab8caee75f.hot-update.json",
       "size": 53,
       "chunks": [],
       "chunkNames": [],
@@ -23,8 +23,8 @@
       "emitted": false
     },
     {
-      "name": "ct-frontity.9c25e146049dd569e80c.hot-update.js",
-      "size": 29570,
+      "name": "ct-frontity.93daa65214ab8caee75f.hot-update.js",
+      "size": 35879,
       "chunks": [
         "ct-frontity"
       ],
@@ -39,7 +39,7 @@
     },
     {
       "name": "ct-frontity.module.js",
-      "size": 6959300,
+      "size": 6985450,
       "chunks": [
         "ct-frontity"
       ],
@@ -50,32 +50,22 @@
       "emitted": false
     },
     {
-      "name": "fonts/Roboto-Bold.ttf",
-      "size": 167336,
+      "name": "fonts/OpenSans-All.ttf",
+      "size": 529672,
       "chunks": [],
       "chunkNames": [],
       "info": {
-        "sourceFilename": "packages/chimneytec/src/components/fonts/Roboto-Bold.ttf"
+        "sourceFilename": "packages/chimneytec/src/components/fonts/OpenSans-All.ttf"
       },
       "emitted": false
     },
     {
-      "name": "fonts/Roboto-Light.ttf",
-      "size": 167000,
+      "name": "fonts/Oswald-All.ttf",
+      "size": 153152,
       "chunks": [],
       "chunkNames": [],
       "info": {
-        "sourceFilename": "packages/chimneytec/src/components/fonts/Roboto-Light.ttf"
-      },
-      "emitted": false
-    },
-    {
-      "name": "fonts/Roboto-Medium.ttf",
-      "size": 168644,
-      "chunks": [],
-      "chunkNames": [],
-      "info": {
-        "sourceFilename": "packages/chimneytec/src/components/fonts/Roboto-Medium.ttf"
+        "sourceFilename": "packages/chimneytec/src/components/fonts/Oswald-All.ttf"
       },
       "emitted": false
     },
@@ -138,7 +128,7 @@
       ],
       "assets": [
         "ct-frontity.module.js",
-        "ct-frontity.9c25e146049dd569e80c.hot-update.js"
+        "ct-frontity.93daa65214ab8caee75f.hot-update.js"
       ],
       "children": {},
       "childAssets": {}
@@ -150,7 +140,7 @@
       "id": "ct-frontity",
       "files": [
         "ct-frontity.module.js",
-        "ct-frontity.9c25e146049dd569e80c.hot-update.js"
+        "ct-frontity.93daa65214ab8caee75f.hot-update.js"
       ]
     }
   ]

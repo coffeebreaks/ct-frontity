@@ -17,12 +17,12 @@ export const MainHeader = styled.header`
   align-items: center;
   justify-content: space-between;
 
-  padding: 1rem;
+  padding: .5rem;
   z-index: 999;
 `;
 
 export const Logo = styled.img`
-  max-height: 30px;
+  max-height: 50px;
 `;
 
 export const SmallCap = styled.div`

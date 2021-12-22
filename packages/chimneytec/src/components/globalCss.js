@@ -1,31 +1,26 @@
 import {Global, css} from "frontity"
-import RobotoMedium from './fonts/Roboto-Medium.ttf';
-import RobotoLight from './fonts/Roboto-Light.ttf';
-import RobotoBold from './fonts/Roboto-Bold.ttf';
+import Oswald from './fonts/Oswald-All.ttf';
+import OpenSans from './fonts/OpenSans-All.ttf';
+
 
 const GlobalCss = () => {
 return (
 <Global styles={css`
-/* @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700;1,900&display=swap'); */
 @font-face {
-  font-family: 'Roboto-Light';
-  src: url(${RobotoLight}) format('truetype');       
+  font-family: 'Oswald';
+  src: url(${Oswald}) format('truetype');       
 }
+
 @font-face {
-  font-family: 'Roboto-Medium';
-  src:  url(${RobotoMedium}) format('truetype');
-     
-}
-@font-face {
-  font-family: 'Roboto-Heavy';
-  src: url(${RobotoBold}) format('truetype');       
+  font-family: 'OpenSans';
+  src: url(${OpenSans}) format('truetype');       
 }
 body {
     margin: 0;
     padding: 0;
     /* box-sizing: border-box; */
   
-    font-family: "Roboto-Light";
+    font-family: "OpenSans";
     font-weight: 100;
     width: 100vw;
     min-width: 320px;
@@ -34,7 +29,7 @@ body {
     color: whitesmoke;
 }
 html {
-    font-family: system-ui, Verdana, Arial, sans-serif;
+    font-family: OpenSans, Verdana, Arial, sans-serif;
 }
 
 .textBlock {
@@ -55,7 +50,7 @@ html {
     align-items: center;
 }
 h1.rubrik {
-    font-family: "Roboto-Medium";
+    font-family: "Oswald";
     color: black;
     text-align: center;
     margin: 0;
