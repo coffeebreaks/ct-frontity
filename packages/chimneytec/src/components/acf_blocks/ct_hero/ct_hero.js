@@ -1,4 +1,4 @@
-import { ImageWrapper, Text, ColorFilter, TextSection, FormSection } from "./styledComponents";
+import { ImageWrapper, Text, ColorFilter, TextSection, FormSection, Button } from "./styledComponents";
 import ContactForm from "./contactForm"
 const CT_Hero = ({ api }) => {
  
@@ -7,7 +7,7 @@ const CT_Hero = ({ api }) => {
       <ImageWrapper image={api.bild}>
         <TextSection>
         <Text dangerouslySetInnerHTML={{ __html: api.text }}></Text>
-  
+        <Button>Se Installationsvideo</Button> 
       </TextSection>
 
       <FormSection>

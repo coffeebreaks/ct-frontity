@@ -20,15 +20,38 @@ export const ImageWrapper = styled.div`
 `;
 
 export const FormSection = styled.div`
+@media(max-width: 700px){
+  align-items: flex-start;
 
+}
 display: flex;
-jusify-content: center;
+justify-content: center;
 align-items: center;
 
 `
 
 export const TextSection = styled.div`
 // overflow: hidden;
+
+`
+
+export const Headline = styled.div`
+display: flex;
+flex-direction: column;
+color: black;
+justify-content: center;
+align-items: center;
+
+h2 {
+  margin: 1rem;
+
+}
+
+p {
+  margin: 0;
+  padding: 0 1rem ;
+}
+
 
 `
 
@@ -59,6 +82,7 @@ export const Text = styled.div`
     text-shadow: 4px 5px 15px #00000036;
     color: white;
     letter-spacing: -2px;
+    
   }
   
   p {
@@ -66,10 +90,35 @@ export const Text = styled.div`
     padding: 0px;
     max-width: 30ch;
     font-size: 25px;
-    font-weight: 100;
+ 
     font-size: 24px;
-    background: #0a0a0aad;
+    background-color: #1b4ea4bd;
+    font-family: "OpenSans";
+    color: #ffffff;
     padding: 1rem;
+  }
+
+  @media(max-width: 700px){
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+
+    h1 {
+      font-size: 1.9rem;
+      letter-spacing: initial;
+      text-align: center;
+
+    }
+
+    h5 {
+      text-align: center;
+    }
+
+    p {
+      font-size: 1rem;
+    }
   }
 `;
 
@@ -86,26 +135,44 @@ width: 100%;
 min-width: 100vh;
 
 `
+
+export const SectionWrapper = styled.div`
+    background-color: #ffffff75;
+    max-width: 470px;
+`
+
 export const Input = styled.input`
 font-size: 16px;
 padding: 1rem 1rem;
-margin: 0 1rem;
+margin: .5rem 1rem;
 width: 100%;
+max-width: 550px;
+border: 0px solid gray;
 `
 
+export const InputLines = styled.textarea`
+font-size: 16px;
+padding: 1rem 1rem;
+margin: .5rem 1rem;
+width: 100%;
+max-width: 550px;
+border: 0px solid gray;
+font-family: inherit;
+
+`
+
+
+
 export const InputWrapper = styled.div`
-background: red;
 display: flex;
 padding: 1rem;
 margin: 0 auto;
-height: 100%;
 align-items: center;
 justify-content: space-around;
 flex-wrap: wrap;
-// background: white;
-heigth: 100%;
 margin: 0px;
 justify-self: center;
+
 
 
 input::placeholder {
@@ -116,8 +183,12 @@ input::placeholder {
 input[type=submit]{
   color: white;
   background: #f79007;
-
+  max-width: 320px;
   border: none;
-  
 }
 ` 
+
+export const Button = styled.a`
+background-color: blue;
+padding: 1rem;
+`
