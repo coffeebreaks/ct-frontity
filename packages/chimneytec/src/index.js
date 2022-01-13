@@ -2,6 +2,35 @@ import Theme from "./components/home";
     import image from "@frontity/html2react/processors/image";
     import iframe from "@frontity/html2react/processors/iframe";
 
+
+    const allPostsHandler = {
+      name: "allPosts",
+      priority: 10,
+      pattern: "allposts",
+      func: async ({ route, params, state, libraries }) => {
+        const { api } = libraries.source;
+    
+        // 1. fetch the data you want from the endpoint page
+        const response = await api.get({
+          endpoint: "/wp/v2/posts/",
+          params: {
+            per_page: 100, // To make sure you get all of them
+          },
+        });
+    
+        // 2. get an array with each item in json format
+        const items = await response.json();
+    
+        // 3. add data to source
+        const currentPageData = state.source.data[route];
+    
+        Object.assign(currentPageData, {
+          items,
+        });
+      },
+    };
+
+
     // Custom handler for ACF options
     const acfOptionsHandler = {
       pattern: "acf-settings",
@@ -33,6 +62,9 @@ import Theme from "./components/home";
           Object.assign(data, { ...option, ispagelogo: true });
         }
       };
+
+
+ 
   
 
     const marsTheme = {
@@ -71,6 +103,9 @@ import Theme from "./components/home";
             await Promise.all([
               actions.source.fetch("page-logo"),
             ]);
+            await Promise.all([
+              actions.source.fetch("allposts"),
+            ]);
           },
           toggleMobileMenu: ({ state }) => {
             state.theme.isMobileMenuOpen = !state.theme.isMobileMenuOpen;
@@ -89,8 +124,9 @@ import Theme from "./components/home";
           processors: [image, iframe],
         },
         source: {
-        handlers: [acfOptionsHandler2],
-        handlers: [acfOptionsHandler],
+        handlers: [acfOptionsHandler2, acfOptionsHandler, allPostsHandler],
+
+       
         }
       },
     };

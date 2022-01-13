@@ -1,0 +1,15 @@
+webpackHotUpdate("ct-frontity",{
+
+/***/ "./packages/chimneytec/src/components/acf_blocks/ct_referensbanner.js":
+/*!****************************************************************************!*\
+  !*** ./packages/chimneytec/src/components/acf_blocks/ct_referensbanner.js ***!
+  \****************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var frontity__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! frontity */ \"./node_modules/frontity/dist/src/index.js\");\n/* harmony import */ var frontity__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(frontity__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @emotion/react/jsx-runtime */ \"./node_modules/@emotion/react/jsx-runtime/dist/emotion-react-jsx-runtime.browser.esm.js\");\nconst CT_ReferensBanner=({api,state})=>{const postKey=\"allposts/\";const posts=state.source.data[postKey].items;console.log(posts);return Object(_emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__[\"jsxs\"])(_emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__[\"Fragment\"],{children:[posts.map(x=>x.ca),api.kategori]});};/* harmony default export */ __webpack_exports__[\"default\"] = (CT_ReferensBanner);//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9wYWNrYWdlcy9jaGltbmV5dGVjL3NyYy9jb21wb25lbnRzL2FjZl9ibG9ja3MvY3RfcmVmZXJlbnNiYW5uZXIuanM/MDY2YyJdLCJuYW1lcyI6WyJDVF9SZWZlcmVuc0Jhbm5lciIsImFwaSIsInN0YXRlIiwicG9zdEtleSIsInBvc3RzIiwic291cmNlIiwiZGF0YSIsIml0ZW1zIiwiY29uc29sZSIsImxvZyIsIm1hcCIsIngiLCJjYSIsImthdGVnb3JpIl0sIm1hcHBpbmdzIjoiQUFBQTtBQUFBO0FBQUE7QUFBQTtBQUVBLEtBQU1BLGtCQUFpQixDQUFHLENBQUMsQ0FBQ0MsR0FBRCxDQUFPQyxLQUFQLENBQUQsR0FBbUIsQ0FDekMsS0FBTUMsUUFBTyxDQUFHLFdBQWhCLENBQ0EsS0FBTUMsTUFBSyxDQUFHRixLQUFLLENBQUNHLE1BQU4sQ0FBYUMsSUFBYixDQUFrQkgsT0FBbEIsRUFBMkJJLEtBQXpDLENBRUFDLE9BQU8sQ0FBQ0MsR0FBUixDQUFZTCxLQUFaLEVBRUEsTUFDSSx3SkFDQ0EsS0FBSyxDQUFDTSxHQUFOLENBQVdDLENBQUQsRUFBTUEsQ0FBQyxDQUFDQyxFQUFsQixDQURELENBRUNYLEdBQUcsQ0FBQ1ksUUFGTCxHQURKLENBTUgsQ0FaRCxDQWNlYixnRkFBZiIsImZpbGUiOiIuL3BhY2thZ2VzL2NoaW1uZXl0ZWMvc3JjL2NvbXBvbmVudHMvYWNmX2Jsb2Nrcy9jdF9yZWZlcmVuc2Jhbm5lci5qcy5qcyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7c3R5bGVkfSBmcm9tIFwiZnJvbnRpdHlcIlxyXG5cclxuY29uc3QgQ1RfUmVmZXJlbnNCYW5uZXIgPSAoe2FwaSAsIHN0YXRlfSkgPT4ge1xyXG4gICAgY29uc3QgcG9zdEtleSA9IFwiYWxscG9zdHMvXCJcclxuICAgIGNvbnN0IHBvc3RzID0gc3RhdGUuc291cmNlLmRhdGFbcG9zdEtleV0uaXRlbXNcclxuXHJcbiAgICBjb25zb2xlLmxvZyhwb3N0cylcclxuXHJcbiAgICByZXR1cm4gKFxyXG4gICAgICAgIDw+XHJcbiAgICAgICAge3Bvc3RzLm1hcCgoeCk9PiB4LmNhKX1cclxuICAgICAgICB7YXBpLmthdGVnb3JpfVxyXG4gICAgICAgIDwvPlxyXG4gICAgKVxyXG59IFxyXG5cclxuZXhwb3J0IGRlZmF1bHQgQ1RfUmVmZXJlbnNCYW5uZXIiXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./packages/chimneytec/src/components/acf_blocks/ct_referensbanner.js\n");
+
+/***/ })
+
+})

@@ -4,7 +4,8 @@ import { styled } from "frontity";
 import { useState } from "react";
 import Switch from "@frontity/components/switch";
 // import Link from "@frontity/html2react/processors/link";
-import Post from "./posts.js";
+import Page from "./page.js";
+import Post from "./post.js";
 // import "./style.css";
 // import List from "./list";
 import GlobalCss from "./globalCss";
@@ -61,7 +62,7 @@ const Root = ({ state }) => {
   `;
 
   return (
-    <div style={{width: "100vw", overflowX: "hidden", height: "100vh"}}>
+    <div style={{width: "100vw", overflowX: "hidden",  minWidth: "320px", height: "100vh"}}>
       <GlobalCss />
       <Desktop>
         <TopNav menu={mainMenu} logo={pageLogo} />
@@ -80,7 +81,7 @@ const Root = ({ state }) => {
             {/* <List when={data.isArchive}>This is a list</List> */}
 
             <Post when={data.isPost} />
-            <Post when={data.isPage} />
+            <Page when={data.isPage} />
             <div when={data.isError}>404 not found</div>
           </Switch>
         </div>
