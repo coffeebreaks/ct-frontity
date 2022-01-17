@@ -14,6 +14,7 @@ import GlobalCss from "./globalCss";
 import TopNav from "./Navigation/topNav/topNav";
 import TopNavMid from "./Navigation/topNavMid/topNavMid";
 import TopNavMin from "./Navigation/topNavMin/topNavMin";
+import Footer from "./Footer"
 
 const Root = ({ state }) => {
   const [myState, setMyState] = useState("init");
@@ -85,6 +86,7 @@ const Root = ({ state }) => {
             <div when={data.isError}>404 not found</div>
           </Switch>
         </div>
+        <Footer/>
       </main>
     </div>
   );
