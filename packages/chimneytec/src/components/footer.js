@@ -35,8 +35,9 @@ const Footer = ({state})=> {
         display: flex;
         flex-flow: column;
         @media(max-width: 800px){
-            jusify-content:center;
-        }
+            justify-content:center;
+            align-items:center;
+            }
     `
 
     const Logo = styled.img`

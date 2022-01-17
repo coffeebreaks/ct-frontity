@@ -4,7 +4,7 @@ const Post = ({state}) => {
 
     const data = state.source.get(state.router.link);
     const post = state.source[data.type][data.id];
-    console.log(post)
+    
     const PostWrapper = styled.div`
     background: white;
     `
@@ -18,6 +18,7 @@ const Post = ({state}) => {
     margin: 0 auto;
     font-size: 18px;
     line-height: 1.5;
+    padding: 2rem;
     `
 
     const ImageWrapper = styled.div`
@@ -32,6 +33,7 @@ const Post = ({state}) => {
         `
 
     const Heading = styled.h1`
+        max-width: 30ch;
         text-align:center;
         color: white;    
         text-shadow: 1px 1px 8px black;

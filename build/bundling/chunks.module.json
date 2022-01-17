@@ -1,19 +1,19 @@
 {
   "errors": [],
   "warnings": [],
-  "hash": "1b6a5a68c569e35415c3",
+  "hash": "074a184aa45a80196b1e",
   "publicPath": "/static/",
   "outputPath": "C:\\webb\\ct-frontity\\build\\static",
   "assetsByChunkName": {
     "ct-frontity": [
       "ct-frontity.module.js",
-      "ct-frontity.fed5a003e6f41d31e6e8.hot-update.js"
+      "ct-frontity.fcac2335a7460037a5a6.hot-update.js"
     ]
   },
   "assets": [
     {
-      "name": "ct-frontity.fed5a003e6f41d31e6e8.hot-update.js",
-      "size": 2201,
+      "name": "ct-frontity.fcac2335a7460037a5a6.hot-update.js",
+      "size": 18318,
       "chunks": [
         "ct-frontity"
       ],
@@ -28,7 +28,7 @@
     },
     {
       "name": "ct-frontity.module.js",
-      "size": 7139534,
+      "size": 7172048,
       "chunks": [
         "ct-frontity"
       ],
@@ -39,7 +39,7 @@
       "emitted": false
     },
     {
-      "name": "fed5a003e6f41d31e6e8.hot-update.json",
+      "name": "fcac2335a7460037a5a6.hot-update.json",
       "size": 53,
       "chunks": [],
       "chunkNames": [],
@@ -128,7 +128,7 @@
       ],
       "assets": [
         "ct-frontity.module.js",
-        "ct-frontity.fed5a003e6f41d31e6e8.hot-update.js"
+        "ct-frontity.fcac2335a7460037a5a6.hot-update.js"
       ],
       "children": {},
       "childAssets": {}
@@ -140,7 +140,7 @@
       "id": "ct-frontity",
       "files": [
         "ct-frontity.module.js",
-        "ct-frontity.fed5a003e6f41d31e6e8.hot-update.js"
+        "ct-frontity.fcac2335a7460037a5a6.hot-update.js"
       ]
     }
   ]

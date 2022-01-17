@@ -63,7 +63,7 @@ const Root = ({ state }) => {
   `;
 
   return (
-    <div style={{width: "100vw", overflowX: "hidden",  minWidth: "320px", height: "100vh"}}>
+    <div style={{width: "100vw", overflowX: "hidden",  minWidth: "320px"}}>
       <GlobalCss />
       <Desktop>
         <TopNav menu={mainMenu} logo={pageLogo} />
