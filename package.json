@@ -22,6 +22,7 @@
     "@frontity/mars-theme": "./packages/mars-theme",
     "@frontity/tiny-router": "^1.4.4",
     "@frontity/wp-source": "^1.11.7",
+    "axios": "^0.25.0",
     "chimneytec": "file:packages/chimneytec",
     "frontity": "^1.17.1"
   }

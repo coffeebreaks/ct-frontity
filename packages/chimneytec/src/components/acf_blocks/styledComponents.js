@@ -65,7 +65,7 @@ padding: 1rem 1rem;
 margin: .5rem 1rem;
 width: 100%;
 max-width: 550px;
-border: 0px solid gray;
+border: 1px solid #d9d9d9cc;
 `
 
 export const InputLines = styled.textarea`
@@ -74,7 +74,7 @@ padding: 1rem 1rem;
 margin: .5rem 1rem;
 width: 100%;
 max-width: 550px;
-border: 0px solid gray;
+border: 1px solid #d9d9d9cc;
 font-family: inherit;
 
 `

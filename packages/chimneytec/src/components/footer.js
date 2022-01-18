@@ -6,6 +6,8 @@ const Footer = ({state})=> {
     
     const FooterWrapper = styled.div`
     background: #174ea1;
+    font-family: "Oswald";
+    font-family: "OpenSans"
         display: flex;
         flex-flow: row;
         padding: 2rem;
@@ -24,6 +26,7 @@ const Footer = ({state})=> {
 
     const LeftSide = styled.div`
         display: flex;
+
         flex-flow: column;
         color: white;
         h2 {

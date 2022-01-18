@@ -62,6 +62,13 @@ const Root = ({ state }) => {
     }
   `;
 
+  const Loading = styled.div`
+    height: 400px;
+    width: 100vw;
+    color: red;
+
+  `
+
   return (
     <div style={{width: "100vw", overflowX: "hidden",  minWidth: "320px"}}>
       <GlobalCss />
@@ -80,7 +87,7 @@ const Root = ({ state }) => {
         <div>
           <Switch>
             {/* <List when={data.isArchive}>This is a list</List> */}
-
+            <Loading when={data.isFetching}/>
             <Post when={data.isPost} />
             <Page when={data.isPage} />
             <div when={data.isError}>404 not found</div>

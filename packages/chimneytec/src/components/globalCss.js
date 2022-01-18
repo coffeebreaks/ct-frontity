@@ -25,7 +25,7 @@ body {
     width: 100vw;
     min-width: 320px;
     overflow-x: hidden;
-    background-color: rgb(65, 65, 65);
+ 
     color: whitesmoke;
 }
 html {
