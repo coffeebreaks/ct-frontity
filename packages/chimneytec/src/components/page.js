@@ -8,6 +8,8 @@ import styled from "frontity";
 import CT_ReferensBanner from "./acf_blocks/ct_referensbanner";
 import CT_InfoPage from "./acf_blocks/ct_infopage"
 import CT_Document from "./acf_blocks/ct_document"
+import ContactForm from "./acf_blocks/contactForm";
+import ContactBlock from "./acf_blocks/ct_contactBlock";
 
 const Page = ({ state }) => {
   const data = state.source.get(state.router.link);
@@ -29,6 +31,8 @@ const Page = ({ state }) => {
             <CT_ReferensBanner when={x.acf_fc_layout === "referensbanner"} api={x} state={state}/>
             <CT_InfoPage when={x.acf_fc_layout === "infosida"} api={x} state={state}/>
             <CT_Document when={x.acf_fc_layout === "dokument"} api={x} state={state}/>
+            <ContactForm when={x.acf_fc_layout === "kontaktformular"} api={x} state={state}/>
+            <ContactBlock when={x.acf_fc_layout === "kontactblock"} api={x}/>
             
           </Switch>
         </>
