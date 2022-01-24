@@ -2,12 +2,6 @@ import {styled} from "frontity"
 
 const CT_InfoPage = ({api}) => {
 
-    // 
-    //     "acf_fc_layout": "infosida",
-    //     "sidrubrik": "KANALTÄTNING FÖR RÖKKANALER OCH SKORSTENAR",
-    //     "bild": "https://vlogtog.webbdesign.org/wp-content/uploads/2022/01/skorsten-111.jpg",
-    //     "text": "<h2>FitFire®
-
     const Wrapper = styled.div`
         background: white;
         color: black;    
@@ -58,7 +52,7 @@ const CT_InfoPage = ({api}) => {
         <h1>{api.sidrubrik}</h1>
         </Header>
         <Content dangerouslySetInnerHTML={{__html: api.text}}/>
-       
+        
         </Wrapper>
     )
 }

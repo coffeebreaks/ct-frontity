@@ -1,8 +1,21 @@
-import { ColorFilter, FormSection } from "./styledComponents";
 import ContactForm from "./contactForm";
 import { styled } from "frontity";
 
 const CT_Hero = ({ api }) => {
+
+   const FormSection = styled.div`
+  @media(max-width: 700px){
+    align-items: flex-start;
+    width: 100%;
+    
+  }
+  margin: 0 auto;
+  width: 320px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  `
 
   const Content = styled.div`
     grid-template-columns: 1fr 1fr;

@@ -1,4 +1,4 @@
-import styled from "frontity";
+import {styled} from "frontity";
 import { useState } from "react";
 
 import Link from "@frontity/components/link";
@@ -13,6 +13,22 @@ import {
 const TopNavMid = (props) => {
   const [showSubMenu, subMenu] = useState(false);
 
+  const NavItem = styled(Link)`
+  /* margin: 0px 20px; */
+  padding: 0px 0px;
+  color: white;
+  height: 100%;
+  text-decoration:none;
+  z-index: 999;
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  justify-content: center;
+  position: relative;
+  min-width: 100px;
+}
+  `
+
   return (
     <Header>
       <TheVoid onMouseOver={() => subMenu(false)}>
@@ -22,10 +38,10 @@ const TopNavMid = (props) => {
       <MainNavigation>
         {props.menu.map((x) => (
           <>
-            <Link
+            <NavItem
               key={x.title}
               link={x.href}
-              className="NavItem"
+              className=""
               onMouseOver={() =>
                 x.subMenus ? subMenu(x.title) : subMenu(false)
               }
@@ -36,7 +52,7 @@ const TopNavMid = (props) => {
               ) : (
                 ""
               )}
-            </Link>
+            </NavItem>
           </>
         ))}
 

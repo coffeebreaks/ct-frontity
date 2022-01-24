@@ -3,27 +3,44 @@ import Link from "@frontity/components/link";
 import { styled } from "frontity";
 import { useState } from "react";
 import Switch from "@frontity/components/switch";
-// import Link from "@frontity/html2react/processors/link";
 import Page from "./page.js";
 import Post from "./post.js";
-// import "./style.css";
-// import List from "./list";
 import GlobalCss from "./globalCss";
-// import react, { useState, useEffect } from "react";
-// import styled, { css } from "styled-components";
 import TopNav from "./Navigation/topNav/topNav";
 import TopNavMid from "./Navigation/topNavMid/topNavMid";
 import TopNavMin from "./Navigation/topNavMin/topNavMin";
 import Footer from "./Footer"
+import Oswald from './fonts/Oswald-All.ttf';
+import OpenSans from './fonts/OpenSans-All.ttf';
 
 const Root = ({ state }) => {
   const [myState, setMyState] = useState("init");
 
   const data = state.source.get(state.router.link);
-
   const options = state.source.get("acf-settings");
   const mainMenu = options.acf.huvudmeny;
   const pageLogo = options.acf.logo;
+
+const Body = styled.body`
+  @font-face {
+  font-family: 'Oswald';
+  src: url(${Oswald}) format('truetype');       
+  }
+  @font-face {
+    font-family: 'OpenSans';
+    src: url(${OpenSans}) format('truetype');       
+  }
+
+  font-family: "OpenSans";
+
+  margin: 0;
+  padding: 0;
+  font-weight: 100;
+  width: 100vw;
+  min-width: 320px;
+  overflow-x: hidden;
+  color: whitesmoke;
+  `
 
   const Text = styled.div`
     background-color: red;
@@ -63,15 +80,25 @@ const Root = ({ state }) => {
   `;
 
   const Loading = styled.div`
-    height: 400px;
-    width: 100vw;
-    color: red;
-
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 100vh;
+  background:black;
+  z-index:9999;
+  
   `
 
-  return (
+  
+  return (    
+    <Body>
+      <Switch>
+            <Loading when={data.isFetching} />
+      </Switch>
     <div style={{width: "100vw", overflowX: "hidden",  minWidth: "320px"}}>
-      <GlobalCss />
+  
+      {/* <GlobalCss /> */}
       <Desktop>
         <TopNav menu={mainMenu} logo={pageLogo} />
       </Desktop>
@@ -83,11 +110,13 @@ const Root = ({ state }) => {
       <Mobile>
         <TopNavMin menu={mainMenu} logo={pageLogo} />
       </Mobile>
+
+
       <main style={{position: "relative", zIndex: "10"}}>
         <div>
           <Switch>
-            {/* <List when={data.isArchive}>This is a list</List> */}
-            <Loading when={data.isFetching}/>
+            {/* <List when={data.isArchive}>This is a list</List>  */}
+          
             <Post when={data.isPost} />
             <Page when={data.isPage} />
             <div when={data.isError}>404 not found</div>
@@ -96,6 +125,7 @@ const Root = ({ state }) => {
         <Footer/>
       </main>
     </div>
+    </Body>
   );
 };
 

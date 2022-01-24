@@ -7,13 +7,13 @@ const Footer = ({state})=> {
     const FooterWrapper = styled.div`
     background: #174ea1;
     font-family: "Oswald";
-    font-family: "OpenSans"
+    font-family: "OpenSans";
         display: flex;
         flex-flow: row;
         padding: 2rem;
         justify-content: space-between;
         @media(max-width: 800px){
-            flex-flow: column
+            flex-flow: column;
         }
         a {
             color: white;
