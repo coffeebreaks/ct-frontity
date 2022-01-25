@@ -31,7 +31,8 @@ const CT_Hero = ({ api }) => {
    
   `;
   const ImageWrapper = styled.div`
-    background-color: rgb(60, 66, 79);
+  background-color: rgb(94 94 94);
+    background-blend-mode: overlay;
     background-image: url("${(props) => props.image}");
     background-size: cover;
     height: 100%;
@@ -84,7 +85,7 @@ const CT_Hero = ({ api }) => {
       font-size: 25px;
 
       font-size: 24px;
-      background-color: #707070bd;
+      // background-color: #707070bd;
       font-family: "OpenSans";
       color: #ffffff;
       padding: 1rem;
