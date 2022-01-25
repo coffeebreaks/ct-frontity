@@ -82,7 +82,7 @@ import Theme from "./components/home";
          * relevant state. It is scoped to the `theme` namespace.
          */
         theme: {
-          autoPrefetch: "hover",
+          autoPrefetch: "all",
           menu: [],
           isMobileMenuOpen: false,
           featured: {
