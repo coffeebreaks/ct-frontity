@@ -30,14 +30,16 @@ import phone from "./phone.png";
 import map from "./map.png";
 import email from "./email.png";
 import close from "./close.png";
+import Switch from "@frontity/components/switch";
 
 
-const TopNavMin = (props) => {
+const TopNavMin = ({logo, menu}) => {
   const [menuState, setMenuState] = useState(false);
   return (
     
-      <MainHeader>
-         <Logo src={props.logo} /> 
+    <MainHeader>
+        {console.log("...",menu)}
+         <Logo src={logo} /> 
         <MenuButton onClick={() => setMenuState(true)}>
           ☰<SmallCap>Meny</SmallCap>
         </MenuButton>
@@ -50,36 +52,14 @@ const TopNavMin = (props) => {
           </MenuUi>
 
           <MenyHeading> Meny</MenyHeading>
-   
-
+         
           <Links>
-            <LinkHeading>Snabbåtkomst</LinkHeading>
-            <Link href="#">
-              
-              <MenuIcon src={map} /> About our brand
-            </Link>
-            <Link href="#">
-              <MenuIcon src={map} />
-              Our cool stuff
-            </Link>
-            <Link href="#">
-              <MenuIcon src={map} />
-              Contact pros
-            </Link>
-
-            <LinkHeading>Produkter</LinkHeading>
-            <Link href="#">
-              <MenuIcon src={map} />
-              Get cool stuff
-            </Link>
-            <Link href="#">
-              <MenuIcon src={map} />
-              Our news
-            </Link>
-            <Link href="#">
-              <MenuIcon src={map} />
-              Locations
-            </Link>
+          {
+          menu.map((x)=>
+          x.acf_fc_layout === "menytitel"? <LinkHeading> {x.titel} </LinkHeading>:
+          x.acf_fc_layout === "menyrad"? <Link href={x.lank}> {x.titel} </Link>:""
+          )} 
+            
           </Links>
 
           <MenuFooter>

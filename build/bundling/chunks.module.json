@@ -1,16 +1,45 @@
 {
   "errors": [],
   "warnings": [],
-  "hash": "84543b3860a134f0e21a",
+  "hash": "22147c48a4b2782e8761",
   "publicPath": "/static/",
   "outputPath": "C:\\webb\\ct-frontity\\build\\static",
   "assetsByChunkName": {
-    "ct-frontity": "ct-frontity.module.js"
+    "ct-frontity": [
+      "ct-frontity.module.js",
+      "ct-frontity.b932ede1cab59037e12f.hot-update.js"
+    ]
   },
   "assets": [
     {
+      "name": "b932ede1cab59037e12f.hot-update.json",
+      "size": 53,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {
+        "hotModuleReplacement": true,
+        "immutable": true
+      },
+      "emitted": false
+    },
+    {
+      "name": "ct-frontity.b932ede1cab59037e12f.hot-update.js",
+      "size": 13539,
+      "chunks": [
+        "ct-frontity"
+      ],
+      "chunkNames": [
+        "ct-frontity"
+      ],
+      "info": {
+        "hotModuleReplacement": true,
+        "immutable": true
+      },
+      "emitted": false
+    },
+    {
       "name": "ct-frontity.module.js",
-      "size": 7618229,
+      "size": 7616099,
       "chunks": [
         "ct-frontity"
       ],
@@ -18,7 +47,7 @@
         "ct-frontity"
       ],
       "info": {},
-      "emitted": true
+      "emitted": false
     },
     {
       "name": "fonts/OpenSans-All.ttf",
@@ -98,7 +127,8 @@
         "ct-frontity"
       ],
       "assets": [
-        "ct-frontity.module.js"
+        "ct-frontity.module.js",
+        "ct-frontity.b932ede1cab59037e12f.hot-update.js"
       ],
       "children": {},
       "childAssets": {}
@@ -109,7 +139,8 @@
     {
       "id": "ct-frontity",
       "files": [
-        "ct-frontity.module.js"
+        "ct-frontity.module.js",
+        "ct-frontity.b932ede1cab59037e12f.hot-update.js"
       ]
     }
   ]

@@ -19,7 +19,10 @@ const Root = ({ state }) => {
   const data = state.source.get(state.router.link);
   const options = state.source.get("acf-settings");
   const mainMenu = options.acf.huvudmeny;
+  const mobileMenu = options.acf.mobilmeny;
   const pageLogo = options.acf.logo;
+
+  
 
 const Body = styled.body`
   @font-face {
@@ -108,7 +111,7 @@ const Body = styled.body`
       </Tablet>
 
       <Mobile>
-        <TopNavMin menu={mainMenu} logo={pageLogo} />
+        <TopNavMin menu={mobileMenu} logo={pageLogo} />
       </Mobile>
 
 
