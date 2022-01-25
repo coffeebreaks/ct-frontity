@@ -7,7 +7,7 @@ const CT_Hero = ({ api }) => {
   @media(max-width: 700px){
     align-items: flex-start;
     width: 100%;
-    
+    max-width: 290px;
   }
   margin: 0 auto;
   width: 320px;

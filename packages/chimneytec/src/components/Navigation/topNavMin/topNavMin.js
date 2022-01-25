@@ -39,16 +39,16 @@ const TopNavMin = ({logo, menu}) => {
     
     <MainHeader>
         {console.log("...",menu)}
-         <Logo src={logo} /> 
+         <a href="/"><Logo src={logo}/></a> 
         <MenuButton onClick={() => setMenuState(true)}>
           ☰<SmallCap>Meny</SmallCap>
         </MenuButton>
         <MobileMenu show={menuState}>
           <MenuUi>
             <UIButtonImg src={close} onClick={() => setMenuState(false)} />
-            <UIButtonImg src={phone} />
+            {/* <UIButtonImg src={phone} />
             <UIButtonImg src={map} />
-            <UIButtonImg src={email} />
+            <UIButtonImg src={email} /> */}
           </MenuUi>
 
           <MenyHeading> Meny</MenyHeading>
@@ -63,12 +63,12 @@ const TopNavMin = ({logo, menu}) => {
           </Links>
 
           <MenuFooter>
-            <CompanyInfo>
+            {/* <CompanyInfo>
               <PhoneNumber href="tel:0046"> 076 880 56 56</PhoneNumber>
               <Email href="mailto:00@46.com"> info@coolcompy.com</Email>
-            </CompanyInfo>
+            </CompanyInfo> */}
 
-            <SocialLinks>
+            {/* <SocialLinks>
               <a href="#">
                 
                 <SocialIcon src={icon} />
@@ -79,7 +79,7 @@ const TopNavMin = ({logo, menu}) => {
               <a href="#">
                 <SocialIcon src={icon} />
               </a>
-            </SocialLinks>
+            </SocialLinks> */}
           </MenuFooter>
         </MobileMenu>
       </MainHeader>

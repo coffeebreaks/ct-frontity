@@ -32,7 +32,7 @@ const TopNavMid = (props) => {
   return (
     <Header>
       <TheVoid onMouseOver={() => subMenu(false)}>
-        <Logo src={props.logo} />
+        <a href="/"><Logo src={props.logo} /></a>
       </TheVoid>
 
       <MainNavigation>

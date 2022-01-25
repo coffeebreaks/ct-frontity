@@ -127,7 +127,7 @@ margin-bottom: 1rem;
     <NavHeader>
 
       <EmptyZone onMouseOver={() => subMenu(false)}>
-        <Logo src={props.logo} />
+        <a href="/"><Logo src={props.logo} /></a>
       </EmptyZone>
 
       <MainNav>

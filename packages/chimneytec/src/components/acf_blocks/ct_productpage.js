@@ -7,12 +7,24 @@ const CT_Productpage =({api})=>{
     const Wrapper = styled.div`
     display: grid;
     grid-template-columns: 1fr auto;
+    @media(max-width:800px){
+
+
+        display:flex;
+        flex-flow:column;
+        padding: 0 1rem ;
+        
+    }
     `
 
     const Logo = styled.img`
     height: auto;
     width: 340px;
     margin: 1rem 0;
+    @media(max-width:800px){
+        height: auto;
+    width: 280px;
+    }
     `
     const Product_img = styled.img`
     height: auto;
@@ -20,6 +32,15 @@ const CT_Productpage =({api})=>{
     box-shadow: 1px 1px 9px 0px #afafaf;
     padding: 2rem 15rem;
     background: linear-gradient(355deg, #efefef, transparent);
+     @media(max-width:800px){
+
+
+        
+        padding:1rem;
+        margin:0 auto;
+        height: auto;
+        width:200px;
+    }
     `
     const Text = styled.div`
         color: black;
@@ -41,6 +62,12 @@ const CT_Productpage =({api})=>{
         a {
             display:block;
         }
+
+        @media(max-width:800px){
+            width: initial;
+            padding: 1rem;
+            margin: 0;
+        }
     `
 
     const File = styled.a`
@@ -53,6 +80,9 @@ const CT_Productpage =({api})=>{
     &:hover {
         color:blue;
     }
+   @media(max-width:800px){
+       margin: 0;
+   }
     `
 
     const PageLink = styled(Link)`
@@ -64,6 +94,9 @@ const CT_Productpage =({api})=>{
     margin: 1rem 0;
     &:hover {
         color:blue;
+    }
+    @media(max-width:800px){
+        margin: 0;
     }
     `
     const FileImage = styled.img`
