@@ -1,9 +1,9 @@
-import {styled} from "frontity"
+import { styled } from "frontity"
 import ContactForm from "./contactForm"
 import Link from "@frontity/components/link";
 
-const CT_Productpage =({api})=>{
-    
+const CT_Productpage = ({ api }) => {
+
     const Wrapper = styled.div`
     display: grid;
     grid-template-columns: 1fr auto;
@@ -115,35 +115,33 @@ const CT_Productpage =({api})=>{
     margin: 0 auto;
     `
 
-    return(
+    return (
         <Wrapper>
-          
             <Outer>
-            <Flow>
-            <Logo src={api.logga}/>
-            <Product_img src={api.produktbild}/>
-            </Flow>
+                <Flow>
+                    <Logo src={api.logga} alt="FitFire® - RELINING AV VENTILATIONSKANALER"/>
+                    <Product_img src={api.produktbild} alt="FitFire® - RELINING AV VENTILATIONSKANALER" />
+                </Flow>
 
-            <Text dangerouslySetInnerHTML={{__html: api.produkttext}}/>
+                <Text dangerouslySetInnerHTML={{ __html: api.produkttext }} />
             </Outer>
 
-            {api.dokument?
-            <FileWrapper>
-                <h4> Våra andra produkter</h4>
-                {console.log(api)}
-                {api.lankar.map((x)=>
-                <PageLink link={x.lank}>{x.lanktext}</PageLink>
-                )}             
-                <h4>Relaterade dokument</h4>
-                {api.dokument.map((x)=>
-                <File href={x.fil}>📄{x.namn}</File> 
-                )}
-            </FileWrapper>
-            :""
-        }
-        <FormWrapper>
-        <ContactForm/>
-        </FormWrapper>
+            {api.dokument ?
+                <FileWrapper>
+                    <h4> Våra andra produkter</h4>
+                    {api.lankar.map((x) =>
+                        <PageLink link={x.lank}>{x.lanktext}</PageLink>
+                    )}
+                    <h4>Relaterade dokument</h4>
+                    {api.dokument.map((x) =>
+                        <File href={x.fil}>📄{x.namn}</File>
+                    )}
+                </FileWrapper>
+                : ""
+            }
+            <FormWrapper>
+                <ContactForm />
+            </FormWrapper>
 
         </Wrapper>
     )

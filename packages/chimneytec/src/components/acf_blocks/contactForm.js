@@ -2,7 +2,7 @@ import {useState} from "react"
 
 import {styled} from "frontity"
 import axios from "axios"
-const ContactForm = () => {
+const ContactForm = ({color}) => {
 
     const [formResp, setFormResp] = useState("")
     const [display, showForm] = useState(true)
@@ -15,11 +15,11 @@ const ContactForm = () => {
     }
 `
 
-
      const Headline = styled.div`
     display: flex;
     flex-direction: column;
     color: black;
+    color: ${color};
     justify-content: center;
     align-items: center;
     

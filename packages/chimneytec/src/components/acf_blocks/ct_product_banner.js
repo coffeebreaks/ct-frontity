@@ -72,9 +72,9 @@ const CT_Product_Banner = ({api}) =>{
         {
         api.produkter.map((x)=> 
         <ProduktWrapper>
-            <ProduktLogo src={x.produktlogo}/> 
+            <ProduktLogo src={x.produktlogo} alt={x.knapptext}/> 
             <ProduktText dangerouslySetInnerHTML={{__html: x.text}}/>
-            <ProduktBild src={x.produktbild}/>
+            <ProduktBild src={x.produktbild} alt={x.knapptext}/>
             <ProduktButton href={x.knapplank}>{x.knapptext}</ProduktButton>
         </ProduktWrapper>
         )}

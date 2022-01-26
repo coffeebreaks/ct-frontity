@@ -8,6 +8,7 @@ const CT_Hero = ({ api }) => {
     align-items: flex-start;
     width: 100%;
     max-width: 290px;
+  
   }
   margin: 0 auto;
   width: 320px;
@@ -144,9 +145,9 @@ const CT_Hero = ({ api }) => {
             <Button>Se Installationsvideo </Button>
           </TextSection>
 
-          <FormSection>
-            <ContactForm />
-          </FormSection>
+          <FormSection >
+            <ContactForm color="white"/>
+          </FormSection >
         </Content>
       </ImageWrapper>
     </>

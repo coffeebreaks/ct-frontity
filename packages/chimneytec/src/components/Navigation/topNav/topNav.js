@@ -83,21 +83,23 @@ const MainNav = styled.div`
   position: relative;
   z-index: 999;
   display: flex;
+margin: 0px 20px;
 `
 
 const EmptyZone = styled.div`
   width: 100%;
   height: 80px;
   display: flex;
-  align-items: center;`
+  align-items: center;
+ 
+`
 
 const Logo = styled.img`
-  max-height: 60px;
+  max-height: 70px;
 `
 
 const NavItem = styled(Link)`
-/* margin: 0px 20px; */
-padding: 0px 0px;
+/* padding: 0px 0px; */
 color: white;
 height: 100%;
 text-decoration:none;

@@ -64,8 +64,9 @@ const Dokument = ({ api }) => {
                     <DocumentWrapper>
                     {x.fil.map((x) =>
                             <a href={x.fil.url}>
+                                {console.log(x.fil)}
                             <SingleDocument>
-                                <DocumentImage src={x.bild} />
+                                <DocumentImage src={x.bild} alt={x.filnamn} />
                                 <p>{x.filnamn}</p>
                             </SingleDocument>
                             </a>
