@@ -52,7 +52,8 @@ const settings = {
     },
     "@frontity/tiny-router",
     "@frontity/html2react",
-    "@frontity/yoast"
+    "@frontity/yoast",
+    "@frontity/head-tags"
   ]
 };
 

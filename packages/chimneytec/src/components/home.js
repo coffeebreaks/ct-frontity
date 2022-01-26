@@ -215,7 +215,7 @@ const Body = styled.body`
 
   
   return (    
-    <Body>
+    <Body lang="sv">
       <Switch>
             <LoadingSkeleton when={data.isFetching} />
            

@@ -129,7 +129,7 @@ margin-bottom: 1rem;
     <NavHeader>
 
       <EmptyZone onMouseOver={() => subMenu(false)}>
-        <a href="/"><Logo src={props.logo} /></a>
+        <a href="/"><Logo src={props.logo} alt="CHIMNEYTEC SKORSTENS- & VENTILATIONSTEKNIK AB"/></a>
       </EmptyZone>
 
       <MainNav>

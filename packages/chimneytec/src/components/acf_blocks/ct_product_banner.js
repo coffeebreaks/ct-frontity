@@ -43,15 +43,6 @@ const CT_Product_Banner = ({api}) =>{
     min-height: 250px;
    
 
-    .blue{
-        color: blue;
-        font-weight: 900;
-    }
-    
-    .red {
-        color: red;
-        font-weight: 900;
-    }
     `
     const ProduktButton = styled.a`
         color: #0066ff;

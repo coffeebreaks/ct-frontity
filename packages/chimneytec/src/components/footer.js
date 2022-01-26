@@ -63,12 +63,12 @@ const Footer = ({state})=> {
             <p>{footerData.adress2}</p>
             <p>{footerData.telefon}</p>
             <a href={"mailto:" + footerData.epostadress}>{footerData.epostadress} | Kontakta oss → </a>
-            <Social src={footerData.linkedin_logo}/>
+            <Social src={footerData.linkedin_logo} alt="CHIMNEYTEC SKORSTENS- & VENTILATIONSTEKNIK AB"/>
         </LeftSide>
 
         <RightSide>
             {footerData.certifikat?.map((x)=>
-            <Logo src={x.logo}/>
+            <Logo src={x.logo} alt="CHIMNEYTEC SKORSTENS- & VENTILATIONSTEKNIK AB"/>
             )}
         </RightSide>
 
