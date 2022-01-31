@@ -1,17 +1,20 @@
-import { connect, Global, libraries } from "frontity";
+import { connect, Global, css, libraries } from "frontity";
 import Link from "@frontity/components/link";
 import { styled } from "frontity";
 import { useState } from "react";
 import Switch from "@frontity/components/switch";
 import Page from "./page.js";
 import Post from "./post.js";
-import GlobalCss from "./globalCss";
+
+import Oswald from './Fonts/Oswald-All.ttf';
+import OpenSans from './Fonts/OpenSans-All.ttf';
+// import GlobalCss from "./globalCss";
+
 import TopNav from "./Navigation/topNav/topNav";
 import TopNavMid from "./Navigation/topNavMid/topNavMid";
 import TopNavMin from "./Navigation/topNavMin/topNavMin";
 import Footer from "./Footer"
-import Oswald from './fonts/Oswald-All.ttf';
-import OpenSans from './fonts/OpenSans-All.ttf';
+
 import {keyframes}  from "frontity"
 
 const Root = ({ state }) => {
@@ -27,12 +30,14 @@ const Root = ({ state }) => {
 
 const Body = styled.body`
   @font-face {
+    font-display: swap; 
   font-family: 'Oswald';
-  src: url(${Oswald}) format('truetype');       
+  src: url(${Oswald}) format('truetype');      
   }
   @font-face {
+    font-display: swap;    
     font-family: 'OpenSans';
-    src: url(${OpenSans}) format('truetype');       
+    src: url(${OpenSans}) format('truetype');   
   }
 
   font-family: "OpenSans";
@@ -157,8 +162,8 @@ const Body = styled.body`
     width: 400px;
     
     background: linear-gradient(90deg,transparent, #e7e7e799,transparent);
-      animation: ${color} 1s ease-in-out infinite;
-  animation-direction: forward;
+    animation: ${color} 1s ease-in-out infinite;
+    animation-direction: forward;
 
    
   `
@@ -215,7 +220,27 @@ const Body = styled.body`
 
   
   return (    
-    <Body lang="sv">
+   <div>
+     <Global
+          styles={css`
+            body {
+                margin: 0;
+                font-family: "Roboto";
+
+                @font-face {
+                  font-display: swap; 
+                font-family: 'Oswald';
+                src: url(${Oswald}) format('truetype');      
+                }
+
+                @font-face {
+                  font-display: swap;    
+                  font-family: 'OpenSans';
+                  src: url(${OpenSans}) format('truetype');   
+          }
+            }
+          `}
+        />
       <Switch>
             <LoadingSkeleton when={data.isFetching} />
            
@@ -249,7 +274,7 @@ const Body = styled.body`
         <Footer/>
       </main>
     </div>
-    </Body>
+    </div>
   );
 };
 

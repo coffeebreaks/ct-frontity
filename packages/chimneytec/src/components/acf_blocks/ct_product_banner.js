@@ -61,11 +61,11 @@ const CT_Product_Banner = ({api}) =>{
         <Text dangerouslySetInnerHTML={{ __html: api.text }} />
         <Flow>
         {
-        api.produkter.map((x)=> 
-        <ProduktWrapper>
-            <ProduktLogo src={x.produktlogo} alt={x.knapptext}/> 
+        api.produkter.map((x,i)=> 
+        <ProduktWrapper key={i}>
+            <ProduktLogo src={x.produktlogo.url} alt={x.produktlogo.alt} width={x.produktlogo.width} height={x.produktlogo.height} /> 
             <ProduktText dangerouslySetInnerHTML={{__html: x.text}}/>
-            <ProduktBild src={x.produktbild} alt={x.knapptext}/>
+            <ProduktBild  src={x.produktbild.url} alt={x.produktbild.alt} width={x.produktbild.width} height={x.produktbild.height}  />
             <ProduktButton href={x.knapplank}>{x.knapptext}</ProduktButton>
         </ProduktWrapper>
         )}

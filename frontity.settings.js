@@ -2,9 +2,9 @@ const settings = {
   "name": "ct-frontity",
   "state": {
     "frontity": {
-      "url": "https://test.frontity.org",
-      "title": "Test Frontity Blog",
-      "description": "WordPress installation for Frontity development"
+      "url": "https://vlogtog.frontity.org",
+      "title": "CCHIMNEYTEC SKORSTENS- & VENTILATIONSTEKNIK AB",
+      "description": "Insatsrör i vattenbaserad komposit för relining av alla typer av rökkanaler och ventilationskanaler"
     }
   },
   "packages": [

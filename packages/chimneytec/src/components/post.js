@@ -29,7 +29,7 @@ const Post = ({state}) => {
         display:flex;
         justify-content: center;
         align-items:center;
-        widht: 100%;
+        width: 100%;
         `
 
     const Heading = styled.h1`

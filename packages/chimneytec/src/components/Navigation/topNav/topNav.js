@@ -96,6 +96,7 @@ const EmptyZone = styled.div`
 
 const Logo = styled.img`
   max-height: 70px;
+  width: auto;
 `
 
 const NavItem = styled(Link)`
@@ -129,21 +130,22 @@ margin-bottom: 1rem;
     <NavHeader>
 
       <EmptyZone onMouseOver={() => subMenu(false)}>
-        <a href="/"><Logo src={props.logo} alt="CHIMNEYTEC SKORSTENS- & VENTILATIONSTEKNIK AB"/></a>
+
+        <a href="/"><Logo src={props.logo.url} alt={props.logo.alt} width={props.logo.width} height={props.logo.height}/></a>
       </EmptyZone>
 
       <MainNav>
        
-        {props.menu.map((x) => (
-            <HoverElement>
+        {props.menu.map((x,i) => (
+            <HoverElement key={i}>
               <NavItem key={x.title} link={x.href}  onMouseOver={() => x.subMenus ? subMenu(x.title) : subMenu(false)}>
                 {x.title}
                 {x.subMenus ? (<span style={{ fontSize: "12px", marginLeft: "5px" }}> ▽ </span>) : ("")}
               </NavItem>
                 {x.isSubMenu? 
               <PopOut>
-                {x.subMenus[0].links.map(link => 
-                    <SubMenuLinks link={link.href}>{link.title}</SubMenuLinks>
+                {x.subMenus[0].links.map((link,i ) => 
+                    <SubMenuLinks key={i} link={link.href}>{link.title}</SubMenuLinks>
                   )}
               </PopOut> 
               :""}

@@ -19,8 +19,8 @@ const Page = ({ state }) => {
 
   return (
     <div>
-      {post.acf[acfTitle].map((x) => (
-        <>
+      {post.acf[acfTitle].map((x,i) => (
+        <div key={i}>
           <Switch>
             <CT_Hero when={x.acf_fc_layout === "ct_hero"} api={x} />
             <CT_Product_Banner
@@ -36,7 +36,7 @@ const Page = ({ state }) => {
             <CT_Productpage when={x.acf_fc_layout === "produktsida"} api={x}/>
 
           </Switch>
-        </>
+        </div>
       ))}
       <div dangerouslySetInnerHTML={{ __html: post.content.rendered }} />
     </div>

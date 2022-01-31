@@ -46,6 +46,7 @@ const Footer = ({state})=> {
     const Logo = styled.img`
     height: auto;
     margin: 1rem;
+    min-width: 150px;
     max-width: 150px;
     `
     const Social = styled.img`
@@ -63,12 +64,12 @@ const Footer = ({state})=> {
             <p>{footerData.adress2}</p>
             <p>{footerData.telefon}</p>
             <a href={"mailto:" + footerData.epostadress}>{footerData.epostadress} | Kontakta oss → </a>
-            <Social src={footerData.linkedin_logo} alt="CHIMNEYTEC SKORSTENS- & VENTILATIONSTEKNIK AB"/>
+            <Social src={footerData.linkedin_logo.url} alt={footerData.linkedin_logo.alt} width={footerData.linkedin_logo.width} height={footerData.linkedin_logo.height}/>
         </LeftSide>
 
         <RightSide>
-            {footerData.certifikat?.map((x)=>
-            <Logo src={x.logo} alt="CHIMNEYTEC SKORSTENS- & VENTILATIONSTEKNIK AB"/>
+            {footerData.certifikat?.map((x,i)=>
+            <Logo key={i} src={x.logo.url} alt={x.logo.alt} width={x.logo.width} height={x.logo.height}/>
             )}
         </RightSide>
 

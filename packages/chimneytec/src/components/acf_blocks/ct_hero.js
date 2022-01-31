@@ -142,7 +142,7 @@ const CT_Hero = ({ api }) => {
         <Content>
           <TextSection>
             <Text dangerouslySetInnerHTML={{ __html: api.text }}></Text>
-            <Button>Se Installationsvideo </Button>
+            {/* <Button>Se Installationsvideo </Button> */}
           </TextSection>
 
           <FormSection >

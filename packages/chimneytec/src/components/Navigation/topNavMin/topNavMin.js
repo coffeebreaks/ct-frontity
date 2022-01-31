@@ -11,7 +11,7 @@ import {
   CompanyInfo,
   Email,
   Link,
-  Logo,
+
   Links,
   MainHeader,
   MainWindow,
@@ -28,18 +28,26 @@ import icon from "./logo.png";
 import { useState } from "react";
 import phone from "./phone.png";
 import map from "./map.png";
+import {styled} from "frontity"
 import email from "./email.png";
 import close from "./close.png";
 import Switch from "@frontity/components/switch";
 
 
 const TopNavMin = ({logo, menu}) => {
+
   const [menuState, setMenuState] = useState(false);
+
+  const Logo = styled.img`
+  max-height: 40px;
+  width: auto;
+  `
+
   return (
     
     <MainHeader>
-        {console.log("...",menu)}
-         <a href="/"><Logo src={logo}/></a> 
+    
+        <a href="/"><Logo src={logo.url} alt={logo.alt} width={logo.width} height={logo.height} /></a>
         <MenuButton onClick={() => setMenuState(true)}>
           ☰<SmallCap>Meny</SmallCap>
         </MenuButton>
@@ -55,9 +63,9 @@ const TopNavMin = ({logo, menu}) => {
          
           <Links>
           {
-          menu.map((x)=>
-          x.acf_fc_layout === "menytitel"? <LinkHeading> {x.titel} </LinkHeading>:
-          x.acf_fc_layout === "menyrad"? <Link href={x.lank}> {x.titel} </Link>:""
+          menu.map((x,i)=>
+          x.acf_fc_layout === "menytitel"? <LinkHeading key={i}> {x.titel} </LinkHeading>:
+          x.acf_fc_layout === "menyrad"? <Link key={i} href={x.lank}> {x.titel} </Link>:""
           )} 
             
           </Links>

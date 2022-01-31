@@ -49,8 +49,8 @@ const CT_InfoBox = ({ api }) => {
     <Wrapper background={api.bakgrund}>
       <Rubrik>{api.rubrik}</Rubrik>
       <Flow>
-        {api.rutor.map((x) => 
-          <Box>
+        {api.rutor.map((x,i) => 
+          <Box key={i}>
             <BoxRubrik>{x.rubrik}</BoxRubrik>
             <BoxText>{x.text}</BoxText>
           </Box>

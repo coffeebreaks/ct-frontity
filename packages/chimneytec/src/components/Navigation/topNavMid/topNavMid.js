@@ -5,7 +5,7 @@ import Link from "@frontity/components/link";
 import {
   Header,
   TheVoid,
-  Logo,
+
   MainNavigation,
   SubMenu,
 } from "./styledComponents";
@@ -26,20 +26,26 @@ const TopNavMid = (props) => {
   justify-content: center;
   position: relative;
   min-width: 100px;
-}
+
   `
+  const Logo = styled.img`
+  max-height: 40px;
+  width: auto;
+  `
+
+
 
   return (
     <Header>
       <TheVoid onMouseOver={() => subMenu(false)}>
-        <a href="/"><Logo src={props.logo} /></a>
+      <a href="/"><Logo src={props.logo.url} alt={props.logo.alt} width={props.logo.width} height={props.logo.height} /></a>
       </TheVoid>
 
       <MainNavigation>
-        {props.menu.map((x) => (
-          <>
+        {props.menu.map((x,i) => (
+          <div key={i}>
             <NavItem
-              key={x.title}
+              key={i}
               link={x.href}
               className=""
               onMouseOver={() =>
@@ -53,32 +59,10 @@ const TopNavMid = (props) => {
                 ""
               )}
             </NavItem>
-          </>
+          </div>
         ))}
 
-        {/* <SubMenu
-          menuState={showSubMenu}
-          onMouseLeave={() => subMenu(false)}
-          onClick={() => subMenu(false)}
-        >
-          {props.menu
-            .filter((x) => x.title === showSubMenu)
-            .map((mainMenu) => (
-              <>
-                <h2 className="MenuHeading">{mainMenu?.subMenuTitle}</h2>
-                <div className="SubMenuSections">
-                  {mainMenu.subMenus?.map((subMenu) => (
-                    <div className="subMenuSection">
-                      <h3 className="SubMenuTitle">{subMenu.title}</h3>
-                      {subMenu.links.map((link) => (
-                         <Link className="SubMenuLinks"link={link.href}>{link.title}</Link>
-                      ))}
-                    </div>
-                  ))}
-                </div>
-              </>
-            ))}
-        </SubMenu> */}
+      
       </MainNavigation>
     </Header>
   );

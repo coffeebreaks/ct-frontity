@@ -78,14 +78,14 @@ const CT_ReferensBanner = ({api , state}) => {
             <Row>
         {posts.map((x)=> 
 
-           x.categories.map((kat)=>
+           x.categories.map((kat, i)=>
         kat === api.kategori
         
         ? 
-        <Case background={x.fimg_url}>
-            <div class="text-background">
+        <Case key={i} background={x.fimg_url}>
+            <div className="text-background">
             <h3> {x.title.rendered} </h3>
-            <a href={x.link}>Läs mer</a>
+            <a href={x.link}>Läs kundcase här</a>
             </div>
         </Case>
         

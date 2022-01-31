@@ -1,0 +1,147 @@
+{
+  "errors": [],
+  "warnings": [],
+  "hash": "3dc98984ba588ab090d6",
+  "publicPath": "/static/",
+  "outputPath": "C:\\webb\\ct-frontity\\build\\static",
+  "assetsByChunkName": {
+    "ct-frontity": [
+      "ct-frontity.module.js",
+      "ct-frontity.5d3f431a34e65e6f84a8.hot-update.js"
+    ]
+  },
+  "assets": [
+    {
+      "name": "5d3f431a34e65e6f84a8.hot-update.json",
+      "size": 53,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {
+        "hotModuleReplacement": true,
+        "immutable": true
+      },
+      "emitted": false
+    },
+    {
+      "name": "ct-frontity.5d3f431a34e65e6f84a8.hot-update.js",
+      "size": 21142,
+      "chunks": [
+        "ct-frontity"
+      ],
+      "chunkNames": [
+        "ct-frontity"
+      ],
+      "info": {
+        "hotModuleReplacement": true,
+        "immutable": true
+      },
+      "emitted": false
+    },
+    {
+      "name": "ct-frontity.module.js",
+      "size": 7801453,
+      "chunks": [
+        "ct-frontity"
+      ],
+      "chunkNames": [
+        "ct-frontity"
+      ],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "fonts/OpenSans-All.ttf",
+      "size": 529672,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {
+        "sourceFilename": "packages/chimneytec/src/components/Fonts/OpenSans-All.ttf"
+      },
+      "emitted": false
+    },
+    {
+      "name": "fonts/Oswald-All.ttf",
+      "size": 153152,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {
+        "sourceFilename": "packages/chimneytec/src/components/Fonts/Oswald-All.ttf"
+      },
+      "emitted": false
+    },
+    {
+      "name": "images/close.png",
+      "size": 13130,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {
+        "sourceFilename": "packages/chimneytec/src/components/Navigation/topNavMin/close.png"
+      },
+      "emitted": false
+    },
+    {
+      "name": "images/email.png",
+      "size": 12556,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {
+        "sourceFilename": "packages/chimneytec/src/components/Navigation/topNavMin/email.png"
+      },
+      "emitted": false
+    },
+    {
+      "name": "images/logo.png",
+      "size": 15255,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {
+        "sourceFilename": "packages/chimneytec/src/components/Navigation/topNavMin/logo.png"
+      },
+      "emitted": false
+    },
+    {
+      "name": "images/map.png",
+      "size": 21475,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {
+        "sourceFilename": "packages/chimneytec/src/components/Navigation/topNavMin/map.png"
+      },
+      "emitted": false
+    },
+    {
+      "name": "images/phone.png",
+      "size": 5894,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {
+        "sourceFilename": "packages/chimneytec/src/components/Navigation/topNavMin/phone.png"
+      },
+      "emitted": false
+    }
+  ],
+  "filteredAssets": 0,
+  "namedChunkGroups": {
+    "ct-frontity": {
+      "chunks": [
+        "ct-frontity"
+      ],
+      "assets": [
+        "ct-frontity.module.js",
+        "ct-frontity.5d3f431a34e65e6f84a8.hot-update.js"
+      ],
+      "children": {},
+      "childAssets": {}
+    }
+  },
+  "generator": "loadable-components",
+  "chunks": [
+    {
+      "id": "ct-frontity",
+      "files": [
+        "ct-frontity.module.js",
+        "ct-frontity.5d3f431a34e65e6f84a8.hot-update.js"
+      ]
+    }
+  ]
+}
