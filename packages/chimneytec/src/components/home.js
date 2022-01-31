@@ -1,4 +1,4 @@
-import { connect, Global, css, libraries } from "frontity";
+import { connect, Global, css, libraries, Head } from "frontity";
 import Link from "@frontity/components/link";
 import { styled } from "frontity";
 import { useState } from "react";
@@ -221,23 +221,27 @@ const Body = styled.body`
   
   return (    
    <div>
+     <Head>
+        <title>CHIMNEYTEC SKORSTENS- & VENTILATIONSTEKNIK AB</title>
+        <html lang="sv" />
+      </Head>
      <Global
           styles={css`
             body {
-                margin: 0;
-                font-family: "Roboto";
-
-                @font-face {
-                  font-display: swap; 
+              margin: 0;
+              
+              @font-face {
+                font-display: swap; 
                 font-family: 'Oswald';
                 src: url(${Oswald}) format('truetype');      
-                }
-
-                @font-face {
-                  font-display: swap;    
-                  font-family: 'OpenSans';
-                  src: url(${OpenSans}) format('truetype');   
-          }
+              }
+              
+              @font-face {
+                font-display: swap;    
+                font-family: 'OpenSans';
+                src: url(${OpenSans}) format('truetype');   
+              }
+              font-family: "OpenSans";
             }
           `}
         />

@@ -105,6 +105,7 @@ color: white;
 height: 100%;
 text-decoration:none;
 z-index: 999;
+margin: 0 .5rem;
 display: inline-flex;
 align-items: center;
 cursor: pointer;
@@ -131,7 +132,7 @@ margin-bottom: 1rem;
 
       <EmptyZone onMouseOver={() => subMenu(false)}>
 
-        <a href="/"><Logo src={props.logo.url} alt={props.logo.alt} width={props.logo.width} height={props.logo.height}/></a>
+        <a href="/"><Logo src={props.logo.url} alt={props.logo.alt} width="270px" height="70px"/></a>
       </EmptyZone>
 
       <MainNav>
