@@ -112,7 +112,7 @@ margin-left: -1rem;
         data.set("your-message", e.target.message.value)
 
         axios.post(
-            `https://vlogtog.webbdesign.org/wp-json/contact-form-7/v1/contact-forms/71/feedback`,
+            `https://chimneytec.se/wp-json/contact-form-7/v1/contact-forms/71/feedback`,
             data,
             {
                 headers: {
