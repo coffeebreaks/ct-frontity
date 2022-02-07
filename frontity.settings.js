@@ -46,7 +46,7 @@ const settings = {
       "state": {
         "source": {
           "url": "https://chimneytec.se",
-          "homepage": "https://chimneytec.se"
+          "homepage": "https://chimneytec.se/chimneytec"
         }
       }
     },
