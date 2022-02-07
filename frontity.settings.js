@@ -2,8 +2,8 @@ const settings = {
   "name": "ct-frontity",
   "state": {
     "frontity": {
-      "url": "https://chimneytec.se",
-      "title": "CCHIMNEYTEC SKORSTENS- & VENTILATIONSTEKNIK AB",
+      "url": "https://chimneytec.se/",
+      "title": "CHIMNEYTEC SKORSTENS- & VENTILATIONSTEKNIK AB",
       "description": "Insatsrör i vattenbaserad komposit för relining av alla typer av rökkanaler och ventilationskanaler"
     }
   },
