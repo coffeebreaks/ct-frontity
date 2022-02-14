@@ -41,6 +41,7 @@ const settings = {
         }
       }
     },
+    
     {
       "name": "@frontity/wp-source",
       "state": {
@@ -49,6 +50,14 @@ const settings = {
           "homepage": "https://chimneytec.se/chimneytec"
         }
       }
+    },
+    {
+      name: "@frontity/google-analytics",
+      state: {
+        googleAnalytics: {
+          trackingId: "UA-47786164-1",
+        },
+      },
     },
     "@frontity/tiny-router",
     "@frontity/html2react",

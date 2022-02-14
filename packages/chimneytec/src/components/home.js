@@ -221,6 +221,7 @@ const Body = styled.body`
   
   return (    
    <div>
+     
      <Head>
         <title>CHIMNEYTEC SKORSTENS- & VENTILATIONSTEKNIK AB</title>
         <html lang="sv" />
@@ -249,7 +250,7 @@ const Body = styled.body`
             <LoadingSkeleton when={data.isFetching} />
            
       </Switch>
-    <div style={{width: "100vw", overflowX: "hidden",  minWidth: "320px"}}>
+    <div style={{ overflowX: "hidden",  minWidth: "320px"}}>
   
       {/* <GlobalCss /> */}
       <Desktop>
