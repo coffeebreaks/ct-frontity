@@ -60,7 +60,7 @@ const settings = {
           trackingId: "UA-47786164-1",
           
         },
-        googleAnalytics: false,
+        googleAnalytics: x,
       },
     },
     "@frontity/tiny-router",
