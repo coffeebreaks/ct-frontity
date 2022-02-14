@@ -58,9 +58,9 @@ const settings = {
       state: {
         googleAnalytics: {
           trackingId: "UA-47786164-1",
-          pageviews: { googleAnalytics: false },
-          events: { googleAnalytics: false }
+          
         },
+        googleAnalytics: false,
       },
     },
     "@frontity/tiny-router",
