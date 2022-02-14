@@ -1,4 +1,4 @@
-let x = true
+let x = false
 const settings = {
   "name": "ct-frontity",
   "state": {
@@ -52,12 +52,14 @@ const settings = {
         }
       }
     },
+ 
     {
-      name: x === true?"@frontity/google-analytics":"",
+      name: "@frontity/google-analytics",
       state: {
         googleAnalytics: {
           trackingId: "UA-47786164-1",
-
+          pageviews: { googleAnalytics: false },
+          events: { googleAnalytics: false }
         },
       },
     },
