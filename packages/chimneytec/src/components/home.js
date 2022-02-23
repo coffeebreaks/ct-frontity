@@ -1,7 +1,7 @@
 import { connect, Global, css, libraries, Head } from "frontity";
 import Link from "@frontity/components/link";
 import { styled } from "frontity";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Switch from "@frontity/components/switch";
 import Page from "./page.js";
 import Post from "./post.js";
@@ -15,10 +15,41 @@ import TopNavMid from "./Navigation/topNavMid/topNavMid";
 import TopNavMin from "./Navigation/topNavMin/topNavMin";
 import Footer from "./Footer"
 
-import {keyframes}  from "frontity"
+import LoadingSkeleton from "./home_components/skeleton.js";
 
+import {keyframes}  from "frontity"
+import ReactGA from "react-ga";
 const Root = ({ state }) => {
-  const [myState, setMyState] = useState("init");
+
+
+const [getAnalytics, setAnalytics] = useState()
+
+
+
+  // Finnished loading
+  useEffect(()=>{
+    //get state from localStorage
+    let localState = localStorage.getItem("analytics")
+
+    setAnalytics(localState || "notSet")
+    console.log("localstorage", localStorage.getItem("analytics"))
+    console.log("update first time", getAnalytics)
+    
+  },[])
+  
+  //On state change
+  useEffect(()=>{
+    localStorage.setItem("analytics", getAnalytics)
+    console.log("state change", getAnalytics)
+    if (getAnalytics === "true"){
+      ReactGA.initialize("UA-47786164-1")
+      ReactGA.pageview(state.router.link)
+      localStorage.setItem("analytics", "true")
+      }
+  
+  },[getAnalytics])
+
+
 
   const data = state.source.get(state.router.link);
   const options = state.source.get("acf-settings");
@@ -51,15 +82,15 @@ const Body = styled.body`
   color: whitesmoke;
   `
 
-  const Text = styled.div`
-    background-color: red;
-    width: 40px;
-    height: 40px;
-    @media (max-width: 500px) {
-      background-color: green;
-      background: ${(props) => setMyState("new!")};
-    }
-  `;
+  // const Text = styled.div`
+  //   background-color: red;
+  //   width: 40px;
+  //   height: 40px;
+  //   @media (max-width: 500px) {
+  //     background-color: green;
+  //     background: ${(props) => setMyState("new!")};
+  //   }
+  // `;
 
   const Desktop = styled.div`
     display: block;
@@ -88,133 +119,70 @@ const Body = styled.body`
     }
   `;
 
-  const Loading = styled.div`
-  position: fixed;
-  top: 0px;
-  left: 0px;
-  width: 100vw;
-  height: 100vh;
-  background:white; 
-  z-index:9999;
   
-  `
 
-  const LoadingWrapper = styled.div`
-  position: fixed;
-  top: 0px;
+  const Cookies = ()=> {
     
-  left: 0px;
-  flex-direction: column;
-  width: 100vw;
-  height: 100vh;
-  background:white; 
-  z-index:9999;
-  `
+    const CookieBanner = styled.div`
+    width: 100%;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    min-height: 200px;
+    right: 0px;
+    bottom: 0px;
+    z-index: 9999;
+    background-color: #000000db;
+    color: white;
+    padding-bottom: 1rem;
+    p {
+      padding: 1rem;
+      text-align: center;
+    }
+    `
 
-  const color =()=> keyframes`
-  0%{
-   transform: translateX(0px);
-   opacity: 0;
-  }
+    const Button = styled.button`
+      padding: 1rem;
+      box-shadow: none;
+      border: 1px solid white;
+      min-width: 300px;
+      background-color: ${ props => props.color};
+      color: white;
+      margin: .5rem;
+      &:hover {
+        background-color: blue;
+      }
+    `
 
-  24% {
-    opacity: 1;
-  }
-  
-50% {
-  opacity: 1;
-}
+    const Details = styled.details`
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    a {
+      color: white;
+      text-align: center;
+    }
 
-75% {
-  opacity: 1;
-}
-
-  100% {
-   transform: translateX(100%);
-   opacity: 0;
-  }
-  `
-
-  const SkeletonBox = styled.div`
-  border: 1px solid #e5e5e5;
-  width: ${(props)=> props.width};
-  margin: 1rem auto;
-  padding: 1rem;
-  display:flex;
-
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  box-shadow: 5px 8px 10px 0px #a1a1a12b;
-  `
-
-  const WhiteBox = (props)=> {
-
-    return (
-      <WhiteBoxStyle width={props.width} height={props.height}>
-
-        <FadeElement/>
-      </WhiteBoxStyle>
-    )
-  }
-  
-  const FadeElement = styled.div`
-    height: 1000px;
-    width: 400px;
-    
-    background: linear-gradient(90deg,transparent, #e7e7e799,transparent);
-    animation: ${color} 1s ease-in-out infinite;
-    animation-direction: forward;
+    `
 
    
-  `
-
-  const WhiteBoxStyle = styled.div`
-  overflow: hidden;
-  box-shadow: 5px 8px 10px 0px #a1a1a12b;
-  width: auto;
-  min-width: 200px;
-  height: ${(props)=> props.height};
-  width: ${(props)=> props.width};
-  border-radius: 5px;
-  border-radius: ${(props)=> props.borderRadius};
-  color: #e9e9e9;
-  flex-basis: 100%;
   
-  margin: 0 auto;
-  margin-bottom: 1rem;
-  `
-
-  const SkeletonWrapper = styled.div`
-  border: 1px solid #e5e5e5;
-  width: 90%;
-  padding: 1rem;
-  margin: 1rem auto;
-  box-shadow: 5px 8px 10px 0px #a1a1a12b;
-  `
-  const LoadingSkeleton = () => {
-    return (
-      <LoadingWrapper>
-        <SkeletonWrapper>
-        <WhiteBox height="300px" width="100%" borderRadius="0px"></WhiteBox>
-        <SkeletonBox>      
-        <div>  
-        <WhiteBox height="10px"  borderRadius="20px"></WhiteBox>
-        <WhiteBox height="10px"  borderRadius="20px"></WhiteBox>
-        </div>
-        <div>
-        <WhiteBox height="40px" borderRadius="20px"></WhiteBox>
-        </div>
-        </SkeletonBox>
-
-        <WhiteBox height="30px" width="480px"></WhiteBox>
-        <WhiteBox height="10px" width="280px"></WhiteBox>
-        <WhiteBox height="10px" width="280px"></WhiteBox>
-        <WhiteBox height="10px" width="280px"></WhiteBox>
-        <WhiteBox height="10px" width="280px"></WhiteBox>
-   
-        </SkeletonWrapper>
-      </LoadingWrapper>
-
+    return(
+      
+      <CookieBanner>
+      <p>Vi använder cookies för att optimera vår webbsida.</p>
+      <>
+      <Button color={"green"} onClick={ ()=> setAnalytics("true") }>Godkänn Cookies </Button>
+      <Button color={"#0000ff00"} onClick={ ()=> setAnalytics("false") }>Endast nödvändiga</Button>
+      </>
+      <Details>
+    <summary>Mer information</summary>
+    <strong>Cookies som används</strong>
+    <a href="https://policies.google.com/technologies/cookies?hl=en-US">Google Analytics</a>
+    </Details>
+      </CookieBanner>
     )
   }
 
@@ -222,7 +190,7 @@ const Body = styled.body`
   return (    
    <div>
      
-     <Head>
+      <Head>
         <title>CHIMNEYTEC SKORSTENS- & VENTILATIONSTEKNIK AB</title>
         <html lang="sv" />
       </Head>
@@ -254,6 +222,7 @@ const Body = styled.body`
   
       {/* <GlobalCss /> */}
       <Desktop>
+       
         <TopNav menu={mainMenu} logo={pageLogo} />
       </Desktop>
 
@@ -267,10 +236,10 @@ const Body = styled.body`
 
 
       <main style={{position: "relative", zIndex: "10"}}>
+      {getAnalytics === "notSet" || getAnalytics === "undefined"?<Cookies/>:""}
         <div>
           <Switch>
             {/* <List when={data.isArchive}>This is a list</List>  */}
-          
             <Post when={data.isPost} />
             <Page when={data.isPage} />
             <div when={data.isError}>404 not found</div>

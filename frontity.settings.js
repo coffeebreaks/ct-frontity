@@ -1,4 +1,4 @@
-let x = false
+
 const settings = {
   "name": "ct-frontity",
   "state": {
@@ -53,16 +53,7 @@ const settings = {
       }
     },
  
-    {
-      name: "@frontity/google-analytics",
-      state: {
-        googleAnalytics: {
-          trackingId: "UA-47786164-1",
-          
-        },
-        googleAnalytics: x,
-      },
-    },
+
     "@frontity/tiny-router",
     "@frontity/html2react",
     "@frontity/yoast",

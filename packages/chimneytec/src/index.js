@@ -1,7 +1,7 @@
 import Theme from "./components/home";
     import image from "@frontity/html2react/processors/image";
     import iframe from "@frontity/html2react/processors/iframe";
-
+  
 
     const allPostsHandler = {
       name: "allPosts",

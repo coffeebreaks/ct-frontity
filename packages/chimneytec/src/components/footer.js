@@ -54,7 +54,7 @@ const Footer = ({state})=> {
     margin: 1rem 0;
     max-width: 140px;
     `
-    
+       console.log("-->",footerData)
     return (
         <FooterWrapper>
         
@@ -64,6 +64,8 @@ const Footer = ({state})=> {
             <p>{footerData.adress2}</p>
             <p>{footerData.telefon}</p>
             <a href={"mailto:" + footerData.epostadress}>{footerData.epostadress} | Kontakta oss → </a>
+         
+            <a href={footerData.gdpr}>Integritetspolicy</a> 
             <Social src={footerData.linkedin_logo.url} alt={footerData.linkedin_logo.alt} width={footerData.linkedin_logo.width} height={footerData.linkedin_logo.height}/>
         </LeftSide>
 
