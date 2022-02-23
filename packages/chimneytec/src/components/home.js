@@ -32,15 +32,14 @@ const [getAnalytics, setAnalytics] = useState()
     let localState = localStorage.getItem("analytics")
 
     setAnalytics(localState || "notSet")
-    console.log("localstorage", localStorage.getItem("analytics"))
-    console.log("update first time", getAnalytics)
+
     
   },[])
   
   //On state change
   useEffect(()=>{
     localStorage.setItem("analytics", getAnalytics)
-    console.log("state change", getAnalytics)
+ 
     if (getAnalytics === "true"){
       ReactGA.initialize("UA-47786164-1")
       ReactGA.pageview(state.router.link)
@@ -82,15 +81,7 @@ const Body = styled.body`
   color: whitesmoke;
   `
 
-  // const Text = styled.div`
-  //   background-color: red;
-  //   width: 40px;
-  //   height: 40px;
-  //   @media (max-width: 500px) {
-  //     background-color: green;
-  //     background: ${(props) => setMyState("new!")};
-  //   }
-  // `;
+
 
   const Desktop = styled.div`
     display: block;
