@@ -36,29 +36,26 @@ const ContactForm = ({color}) => {
     
     `
 
+const InputWrapper = styled.div`
+    display: flex;
+    padding: 1rem;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 0px;
+    justify-self: center;
 
-     const InputWrapper = styled.div`
-display: flex;
-padding: 1rem;
-margin: 0 auto;
-align-items: center;
-justify-content: space-around;
-flex-wrap: wrap;
-margin: 0px;
-justify-self: center;
+    input::placeholder {
+    font-weight: 100;
+    font-size: 16px;
+    }
 
-
-
-input::placeholder {
-  font-weight: 100;
-  font-size: 16px;
-}
-
-input[type=submit]{
-  color: white;
-  background: #0066ff;
-  max-width: 320px;
-  border: none;
+    input[type=submit]{
+    color: white;
+    background: #0066ff;
+    max-width: 320px;
+    border: none;
 }
 ` 
 
@@ -74,19 +71,19 @@ input[type=submit]{
     `
 
      const Input = styled.input`
-font-size: 16px;
-padding: 1rem 1rem;
-margin: .5rem 0rem;
-width: 100%;
-// max-width: 550px;
-border: 1px solid #d9d9d9cc;
-margin-left: -1rem;
+        font-size: 16px;
+        padding: 1rem 1rem;
+        margin: .5rem 0rem;
+        width: 100%;
+        // max-width: 550px;
+        border: 1px solid #d9d9d9cc;
+        margin-left: -1rem;
 
 `
 
     const Wrapper = styled.div`
     display: ${display? "block": "none"};
-    // max-width: 300px;
+    max-width: 450px;
     margin: 0 auto;
     padding: 1rem;
     `
