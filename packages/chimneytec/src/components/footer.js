@@ -54,7 +54,20 @@ const Footer = ({state})=> {
     margin: 1rem 0;
     max-width: 140px;
     `
-       console.log("-->",footerData)
+
+    const FooterText = styled.div`
+
+    padding: 1rem ;
+    p {
+        color: #a7c1e9;
+    margin-bottom: 1rem;
+    max-width: 52ch;
+    }
+    a {
+        color: white;
+    }
+    `
+
     return (
         <FooterWrapper>
         
@@ -68,6 +81,12 @@ const Footer = ({state})=> {
             <a href={footerData.gdpr}>Integritetspolicy</a> 
             <Social src={footerData.linkedin_logo.url} alt={footerData.linkedin_logo.alt} width={footerData.linkedin_logo.width} height={footerData.linkedin_logo.height}/>
         </LeftSide>
+
+        <>
+        {console.log(footerData.footerText)}
+        <FooterText dangerouslySetInnerHTML={{__html: footerData.footertext}} /> 
+    
+        </>
 
         <RightSide>
             {footerData.certifikat?.map((x,i)=>
