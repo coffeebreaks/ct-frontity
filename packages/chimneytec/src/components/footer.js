@@ -56,7 +56,8 @@ const Footer = ({state})=> {
     `
 
     const FooterText = styled.div`
-
+        margin-left: -191px;
+        @media(max-width: 600px){ margin-left: 0px;}
     padding: 1rem ;
     p {
         color: #a7c1e9;
