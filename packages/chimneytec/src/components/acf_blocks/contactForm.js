@@ -107,6 +107,7 @@ const InputWrapper = styled.div`
         data.set("your-name", e.target.name.value)
         data.set("your-email", e.target.email.value)
         data.set("your-message", e.target.message.value)
+        data.set("your-tel", e.target.tel.value)
 
         axios.post(
             `https://chimneytec.se/wp-json/contact-form-7/v1/contact-forms/71/feedback`,
