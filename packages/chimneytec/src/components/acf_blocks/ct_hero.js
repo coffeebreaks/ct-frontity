@@ -138,7 +138,7 @@ const CT_Hero = ({ api }) => {
 
   return (
     <>
-      <ImageWrapper image={api.bild}>
+      <ImageWrapper lazy image={api.bild}>
         <Content>
           <TextSection>
             <Text dangerouslySetInnerHTML={{ __html: api.text }}></Text>

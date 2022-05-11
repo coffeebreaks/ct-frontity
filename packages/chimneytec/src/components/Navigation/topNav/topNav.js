@@ -95,8 +95,7 @@ const EmptyZone = styled.div`
 `
 
 const Logo = styled.img`
-  max-height: 70px;
-  width: auto;
+  
 `
 
 const NavItem = styled(Link)`
@@ -132,7 +131,7 @@ margin-bottom: 1rem;
 
       <EmptyZone onMouseOver={() => subMenu(false)}>
 
-        <a href="/"><Logo src={props.logo.url} alt={props.logo.alt} width="270px" height="70px"/></a>
+        <a href="/"><Logo src={props.logo.url} alt={props.logo.alt} width={props.logo.width * 0.6} height={props.logo.height * 0.6}/></a>
       </EmptyZone>
 
       <MainNav>
