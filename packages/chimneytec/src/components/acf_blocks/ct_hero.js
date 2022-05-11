@@ -27,19 +27,20 @@ const CT_Hero = ({ api }) => {
     position: relative;
     @media (max-width: 1100px) {
       grid-template-columns: 1fr;
-      grid-template-rows: 1fr 1fr;
+      grid-template-rows: 1fr;
     }
    
   `;
   const ImageWrapper = styled.div`
   background-color: rgb(94 94 94);
-    background-blend-mode: overlay;
-    background-image: url("${(props) => props.image}");
-    background-size: cover;
+  position: relative;
+    // background-blend-mode: overlay;
+    // background-image: url("${(props) => props.image}");
+    // background-size: cover;
     height: 100%;
     min-height: 600px;
-    background-repeat: no-repeat;
-    background-position: center;
+    // background-repeat: no-repeat;
+    // background-position: center;
 
 
   `;
@@ -98,15 +99,13 @@ const CT_Hero = ({ api }) => {
       align-items: center;
       text-align: center;
       justify-content: center;
-      h1 {
+      h2 {
         font-size: 27px;
         color: white;
         letter-spacing: inherit;
       }
 
-   
-
-      h5 {
+      h1 {
         text-align: center;
       }
 
@@ -134,11 +133,20 @@ const CT_Hero = ({ api }) => {
         display: flex;
         padding: 2rem;
         flex-direction: column;
-  `;
+  `
+
+  const BackgroundImage = styled.img`
+      width: 100%;
+      position: absolute;
+      opacity: 0.7;
+      height: 100%;
+      object-fit: cover;
+    `
 
   return (
     <>
-      <ImageWrapper lazy image={api.bild}>
+      <ImageWrapper>
+        <BackgroundImage src={api.bild} alt="Chimneytec"/>
         <Content>
           <TextSection>
             <Text dangerouslySetInnerHTML={{ __html: api.text }}></Text>
