@@ -221,7 +221,7 @@ export const Link = styled.a`
   align-items: center;
 
   font-weight: 600;
-  color: #4f4f4f;
+  color: #e4e4e4;
   text-decoration: none;
   padding: 1rem;
   text-align: left;

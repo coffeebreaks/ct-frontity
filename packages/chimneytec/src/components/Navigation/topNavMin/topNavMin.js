@@ -53,7 +53,7 @@ const TopNavMin = ({logo, menu}) => {
         </MenuButton>
         <MobileMenu show={menuState}>
           <MenuUi>
-            <UIButtonImg src={close} onClick={() => setMenuState(false)} />
+            <UIButtonImg src={close} alt="Stänger menyn" onClick={() => setMenuState(false)} />
             {/* <UIButtonImg src={phone} />
             <UIButtonImg src={map} />
             <UIButtonImg src={email} /> */}

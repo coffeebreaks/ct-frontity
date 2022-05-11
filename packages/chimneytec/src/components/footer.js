@@ -31,6 +31,10 @@ const Footer = ({state})=> {
         h2 {
             max-width: 30ch;
         }
+
+        a {
+            padding: 0.5rem 0;
+        }
         `
 
     const RightSide = styled.div`

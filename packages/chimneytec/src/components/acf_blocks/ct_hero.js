@@ -55,7 +55,7 @@ const CT_Hero = ({ api }) => {
     position: relative;
     z-index: 100;
 
-    h5 {
+    h1 {
       margin-bottom: 16px;
       font-family: Oswald;
       font-weight: 400;
@@ -66,7 +66,7 @@ const CT_Hero = ({ api }) => {
       letter-spacing: 3px;
     }
 
-    h1 {
+    h2 {
       margin-bottom: 16px;
       font-family: Oswald;
       font-weight: 600;

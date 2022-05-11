@@ -63,9 +63,9 @@ const CT_Product_Banner = ({api}) =>{
         {
         api.produkter.map((x,i)=> 
         <ProduktWrapper key={i}>
-            <ProduktLogo src={x.produktlogo.url} alt={x.produktlogo.alt} width={x.produktlogo.width} height={x.produktlogo.height} /> 
+            <ProduktLogo lazy src={x.produktlogo.url} alt={x.produktlogo.alt} width={x.produktlogo.width} height={x.produktlogo.height} /> 
             <ProduktText dangerouslySetInnerHTML={{__html: x.text}}/>
-            <ProduktBild  src={x.produktbild.url} alt={x.produktbild.alt} width={x.produktbild.width} height={x.produktbild.height}  />
+            <ProduktBild lazy src={x.produktbild.url} alt={x.produktbild.alt} width={x.produktbild.width} height={x.produktbild.height}  />
             <ProduktButton href={x.knapplank}>{x.knapptext}</ProduktButton>
         </ProduktWrapper>
         )}
