@@ -41,7 +41,7 @@ const Post = ({state}) => {
 
     return (
         <PostWrapper>
-        <ImageWrapper image={post.fimg_url}>
+        <ImageWrapper image={post.acf.bild}>
             <Heading> {post.title.rendered}</Heading>
         </ImageWrapper>
          <TheContent dangerouslySetInnerHTML={{ __html: post.content.rendered }} />

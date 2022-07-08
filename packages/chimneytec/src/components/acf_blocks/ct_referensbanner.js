@@ -82,7 +82,8 @@ const CT_ReferensBanner = ({api , state}) => {
         kat === api.kategori
         
         ? 
-        <Case key={i} lazy background={x.fimg_url}>
+        <Case key={i} lazy background={x.acf.bild}>
+            {console.log(x)}
             <div className="text-background">
             <h3> {x.title.rendered} </h3>
             <a href={x.link}>Läs kundcase här</a>

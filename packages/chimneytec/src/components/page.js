@@ -11,6 +11,7 @@ import CT_Document from "./acf_blocks/ct_document"
 import ContactForm from "./acf_blocks/contactForm";
 import ContactBlock from "./acf_blocks/ct_contactBlock";
 import CT_Productpage from "./acf_blocks/ct_productpage";
+import CT_Video from "./acf_blocks/ct_video";
 
 const Page = ({ state }) => {
   const data = state.source.get(state.router.link);
@@ -19,8 +20,10 @@ const Page = ({ state }) => {
 
   return (
     <div>
+       
       {post.acf[acfTitle].map((x,i) => (
         <div key={i}>
+                {/* {console.log(x.acf_fc_layout)} */}
           <Switch>
             <CT_Hero when={x.acf_fc_layout === "ct_hero"} api={x} />
             <CT_Product_Banner
@@ -34,6 +37,7 @@ const Page = ({ state }) => {
             <ContactForm when={x.acf_fc_layout === "kontaktformular"} api={x} state={state}/>
             <ContactBlock when={x.acf_fc_layout === "kontaktblock"} api={x}/>
             <CT_Productpage when={x.acf_fc_layout === "produktsida"} api={x}/>
+            <CT_Video when={x.acf_fc_layout === "ct_video"} api={x}/>
 
           </Switch>
         </div>
