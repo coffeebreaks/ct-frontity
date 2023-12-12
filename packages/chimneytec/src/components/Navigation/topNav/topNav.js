@@ -125,7 +125,7 @@ font-size: 1.2rem;
 font-weight: 100;
 margin-bottom: 1rem;
 `
-
+console.log("props menu", props.menu)
   return (
     <NavHeader>
 
@@ -137,10 +137,11 @@ margin-bottom: 1rem;
       <MainNav>
        
         {props.menu.map((x,i) => (
+         
             <HoverElement key={i}>
               <NavItem key={x.title} link={x.href}  onMouseOver={() => x.subMenus ? subMenu(x.title) : subMenu(false)}>
                 {x.title}
-                {x.subMenus ? (<span style={{ fontSize: "12px", marginLeft: "5px" }}> ▽ </span>) : ("")}
+                {x.subMenus !== false ? (<span style={{ fontSize: "12px", marginLeft: "5px" }}> ▽ </span>) : ("")}
               </NavItem>
                 {x.isSubMenu? 
               <PopOut>

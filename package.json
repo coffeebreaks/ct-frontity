@@ -27,7 +27,7 @@
     "@frontity/yoast": "^2.1.1",
     "axios": "^0.25.0",
     "chimneytec": "file:packages/chimneytec",
-    "frontity": "^1.17.1",
+    "frontity": "^1.17.2",
     "react-ga": "^3.3.0"
   }
 }
