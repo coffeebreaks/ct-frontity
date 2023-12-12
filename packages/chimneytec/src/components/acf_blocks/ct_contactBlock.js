@@ -84,6 +84,9 @@ const ContactBlock =({api})=> {
     console.log(api)
     return (
         <Wrapper>
+            <FormWrapper>  
+                <ContactForm/>
+            </FormWrapper>
             <StaffWrapper>
                 <StaffImage image={api.portrattbild.url}/>
                 <StaffName>
@@ -100,9 +103,6 @@ const ContactBlock =({api})=> {
                 <AddressBlock dangerouslySetInnerHTML={{__html: api.postadress }}/>               
             </LocationsWrapper>
             
-            <FormWrapper>  
-                <ContactForm/>
-            </FormWrapper>
 
             <Map dangerouslySetInnerHTML={{__html: api.karta}}/> 
             
